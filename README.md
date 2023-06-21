@@ -1,13 +1,13 @@
 # quantumML
-Exploring Quantum Machine Learning : COMP47250 Team Software Project : University College Dublin
+## Exploring Quantum Machine Learning : COMP47250 Team Software Project : University College Dublin
 
-Summaries for research papers:
+## SUMMARIES ON RESEARCH PAPERS AND ARTICLES:
 
-Quantum Machine Learning by Jacob Biamonte, Peter Wittek, Nicola Pancotti, PatrickRebentrost, Nathan Wiebe, and Seth Lloyd. May 14, 2018
+### Paper One[4] on QML: Quantum Machine Learning by Jacob Biamonte, Peter Wittek, Nicola Pancotti, PatrickRebentrost, Nathan Wiebe, and Seth Lloyd. May 14, 2018
 
-Title: Perspectives on Quantum Machine Learning: Applications, Hardware Challenges, and Future Directions
+## Title: Perspectives on Quantum Machine Learning: Applications, Hardware Challenges, and Future Directions
 
-Summary:
+## Summary:
 
 This research paper provides a comprehensive review of quantum machine learning, highlighting its applications, hardware advancements, and challenges. The authors discuss how quantum machine learning algorithms can analyze both classical and quantum data, leading to more efficient and insightful analyses compared to classical approaches. They emphasize the importance of quantum hardware advancements, including small quantum computers and specialized quantum information processors. However, there are four fundamental challenges to address: the input problem, output problem, costing problem, and benchmarking problem. The paper suggests exploring applications of quantum computing to quantum data as a potential solution. This virtuous cycle of innovation can leverage classical machine learning to improve quantum processor designs, which, in turn, enable more powerful quantum-enhanced machine learning applications.
 
@@ -44,3 +44,9 @@ Conclusion:
 
 Quantum machine learning has potential applications, but challenges exist in hardware development and addressing fundamental problems.
 Overcoming these challenges and exploring quantum computing for quantum data analysis are key for future advancements in quantum machine learning.
+
+
+
+# Paper Two [9] on Logical Circuits:
+
+# Paper Three [12] on Quantum Simulators: 
