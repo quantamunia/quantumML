@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap Dashboard</title>
@@ -26,7 +23,7 @@
             <h6 class="my-0 fw-normal">Initial Parameters</h6>
           </div>
           <div class="card-body align-items-left ">
- <form method="POST" action="/">        
+         
             <!--<div class="form-check">
   <input class="form-check-input" type="radio" name="dataset" value="iris" id="flexRadioDefault1">
   <label class="form-check-label" for="flexRadioDefault1">
@@ -43,7 +40,7 @@
 -->
 
 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option selected>Datasets</option>
+  <option selected="">Datasets</option>
   <option value="1">Iris</option>
   <option value="2">Diabetes</option>
   <option value="3">Breast Cancer</option>
@@ -55,7 +52,7 @@
 
 
 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option selected>Train_Test_split Values</option>
+  <option selected="">Train_Test_split Values</option>
   <option value="1">80/20</option>
   <option value="2">70/30</option>
   <option value="3">60/40</option>
@@ -63,7 +60,7 @@
 
           
 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option selected>PCA Values</option>
+  <option selected="">PCA Values</option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -83,18 +80,31 @@
 
 
 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option selected>Feature Map</option>
+  <option selected="">Feature Map</option>
   <option value="1">ZFeatureMap</option>
   <option value="2">ZZFeatureMap</option>
   <option value="3">PauliFeatureMap</option>
 </select>	
 
 
+<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+  <option selected="">Entanglements</option>
+  <option value="1">Linear</option>
+  <option value="2">LInear 2</option>
+  <option value="3">Linear 3</option>
+</select>	
+
+<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+  <option selected="">Models</option>
+  <option value="1">QSVM/SVM</option>
+  <option value="2">QSVC/SVC</option>
+  <option value="3">QNN/NN</option>
+</select>	
 
    
-          </form></div>
+          </div>
         </div>
-      </div>
+      </div></form>
 			 
 
 
@@ -106,14 +116,14 @@
           <div class="card-body">
             
  <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option selected>Reps</option>
+  <option selected="">Reps</option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
 </select>	
 
     <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option selected>Folds</option>
+  <option selected="">Folds</option>
   <option value="1">10</option>
   <option value="2">20</option>
   <option value="3">30</option>
@@ -137,7 +147,7 @@
           <div class="card-body">
             
    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option selected>optimizer type</option>
+  <option selected="">optimizer type</option>
   <option value="1">Adam</option>
   <option value="2">Cobyla</option>
   <option value="3">Spsa</option>
@@ -197,63 +207,209 @@
 			  
             
               <!-- Add more input elements here -->
-              <button type="submit" class="btn btn-primary">Initialise Environment</button>
-            </form>
+			  
+			  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#settingsModal">
+            <i class="fas fa-cog"></i> Azure Settings
+          </button>
+		  
+		  
+           
+            
           </div>
         </div>
       </div>
       <div class="col-md-9">
-        <!-- Main content area -->
-        <h3>Exploring Quantum Machine Learning</h13
-        <!-- Add content here -->
-		<div class="row row-cols-1 row-cols-sm-2 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
-              </div>
-            </div>
-          </div>
+        <!-- Main content area 
+        <h3>Exploring Quantum Machine Learning</h3>-->
+		<br>
+		 <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4>Exploring Quantum Machine Learning</h4>
+          <button type="button" class="btn btn-primary" >
+            <i class="fas fa-cog"></i> Initialise Model
+          </button>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-
-        
-        
-        
-
-        
-        
-        
-      </div>
 		
+		
+		
+		
+		
+	
+		
+		
+
+<div class=" row row-cols-1 row-cols-sm-2 g-3">
+
+
+
+
+   
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+			
+			<button type="button" class="btn btn-outline-primary">Feature Map Circuit</button>
+			
+			
+			
+
+
+
+
+		
+             
+              
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+			
+			
+			<button type="button" class="btn btn-outline-primary">Ansatz Circuit</button>
+			
+            </div>
+          </div>
+        </div>
+        
+
+       
+<div class="b-example-divider"></div>
+<div class="b-example-divider"></div>
+
+
+
+
+
+
+
+		  
+      <!-- Modal -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="settingsModalLabel">Azure Quantum Configuration</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="text" class="form-control mb-3" placeholder="Resource ID URL">
+            <select class="form-select">
+			  <option selected="">Backends</option>
+              <option value="option1">ionq</option>
+              <option value="option2">quantinuum</option>
+              <option value="option3">qasm</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
+    <div class="card shadow-sm">
+      
+            <div class="card-body">
+			
+			<p class="">..... Training in Progress </p>
+		
+             
+              
+            </div>
+
+          </div>
+
+<br>
+
+
+  <div class="card shadow-sm">
+      
+            <div class="card-body">
+			
+			<p class="">..... Deploying to Azure</p>
+			
+		<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 75%">75%</div>
+</div>
+		
+	
+
+
+
+
+		
+             
+              
+            </div>
+			
+	
+	
+	
+	
+
+
+
+          </div>
+		  <br>
+		  
+		     <div class="card shadow-sm">
+      
+            <div class="card-body">
+			
+			<p class="">..... Azure Histograms </p>
+			
+		
+             
+              
+            </div>
+
+          </div>
+		  
+		  <br>
+		  
+		     <div class="card shadow-sm">
+      
+            <div class="card-body">
+			
+			<p class="">..... classical & quantum Model comparison bar chart metrics (Accuracy, F-measure, Recall, Precision) </p>
+			
+		
+             
+              
+            </div>
+
+          </div>
+		  
+		  
+		  
+        
+        
+      </div>
+
+
+
+
+</div>
+    </div>
+	
+	
+	
+	
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
-</body>
 
-</html>
+
+
+
+
+
+
+</body></html>
