@@ -314,18 +314,19 @@
     </div>
   </div>
 
+	<div class="col">
     <div class="card shadow-sm">
-      
+    
             <div class="card-body">
-			
-			<p class="">..... Training in Progress </p>
-		
-             
+			 <h6 class="my-0 fw-normal">..... Training in Progress</h6>
+			   <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph" >
+		       
+              
               
             </div>
 
           </div>
-
+	</div>
 <br>
 
 
@@ -408,8 +409,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
 
 
-
-
+ <script>
+        function updateGraph() {
+            $.ajax({
+                url: '/get_graph_data',
+                method: 'GET',
+                success: function (response) {
+                    var graphSrc = response.graph_src;
+                    $('#graph').attr('src', graphSrc);
+                },
+                complete: function () {
+                    setTimeout(updateGraph, 1000); // Update the graph every 1 second
+                }
+            });
+        }
+        $(document).ready(function () {
+            updateGraph();
+        });
+    </script>
 
 
 
