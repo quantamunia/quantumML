@@ -1,0 +1,34 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objective Function Graph</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function updateGraph() {
+            $.ajax({
+                url: '/get_graph_data',
+                method: 'GET',
+                success: function (response) {
+                    var graphSrc = response.graph_src;
+                    $('#graph').attr('src', graphSrc);
+                },
+                complete: function () {
+                    setTimeout(updateGraph, 1000); // Update the graph every 1 second
+                }
+            });
+        }
+        $(document).ready(function () {
+            updateGraph();
+        });
+    </script>
+</head>
+<body>
+
+    <h1>Objective Function Graph</h1>
+    <img id="graph" src="{{ url_for('static', filename='graph.png') }}" alt="Objective function graph">
+</body>
+</html>
+
