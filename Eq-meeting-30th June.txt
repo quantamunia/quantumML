@@ -1,0 +1,14 @@
+M.O.M 30th June
+
+people agreed on working on different model with same dataset.
+
+Tinoda iris dataset
+*QSVM/SVM
+Rahul iris dataset
+* NN / QNN
+Neha - Iris dataset
+* SVC/QSVC
+Abaasa  - iris dataset
+* VQCS/VQE
+
+everyone agreed they will come up with the idea and explanation of the models by next week
