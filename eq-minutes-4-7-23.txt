@@ -1,0 +1,13 @@
+MINUTES 4 JULY 2023
+
+Neha :  Completed on the basics and now polishing up. Will upload code on github this week
+Tino :  Completed on the basics but having a challenge with printing feature map and ansatz circuits in QSVM pennylane.
+Albert :  Polishing up and putting final touches and will upload code on github this week
+Rahul : Polishing up and putting final touches and will upload code on github this week.
+SHOW AND TELL
+Agreed to showcase 2 models, that is, QNN and QSVM
+Converting histogram results to metrics
+OTHER
+Agreed to work on our different models and ensure they running and then merge them later on.
+Talked about approaching the final merge through OOP and create importable files, classes as part of the final merge in order to avoid one long big code.
+We also talked about aspects we need to have figured out before the last show and tell such as hosting etc.  These will be touched on later
