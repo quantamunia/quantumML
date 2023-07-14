@@ -1,0 +1,8 @@
+MINUTES OF MEETINGS - 13 JUNE 2023
+Lecturer noted that in the next show and tell we should highlight :
+The advantages or disadvantages of quantum machine learning.
+State reasons why we are using simple datasets.
+Much more clarity and detail of quantum  concepts.
+Who are our target users.
+Also Simon reminded the team that converting histogram results from Azure to proper metrics such as F1, accuracy etc is the most difficult part.
+Again...keep things simple.

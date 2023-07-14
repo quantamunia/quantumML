@@ -1,0 +1,11 @@
+MINUTES 16 JUNE 2023
+Agreed to compile a list of tasks as we prepare to assign to members
+Agreed to only show the qiskit code and Azure deployment for our demo
+Agreed to push the iris qiskit code to github
+CHANAGED ROLES:
+Rahul - Developer
+Neha - Tester
+Abassa - Scrum master
+Tinoda - Project Manager
+Agreed that Rahul and Abassa will do the next show and tell
+Neha has a change of circumstances which she communicated to the university & Simon
