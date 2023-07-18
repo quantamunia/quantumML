@@ -12,8 +12,63 @@
       <div class="row">
         <div class="col-md-3">
           <!-- Sidebar with input elements -->
+		  
+		  
           <div class="card">
+		  
+		  
             <div class="card-body">
+			
+					  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+    
+	
+		
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+	 
+	 
+	 
+	 
+
+	  
+	  
+	  
+	  
+	  
+	  
+	      <h3 class="modal-title fs-5" id="exampleModalLabel">Feature Map Circuit</h3><br>
+        <p>is a quantum circuit or transformation that encodes classical data into a quantum state. It takes classical input data, such as numerical features or patterns, and maps them to a quantum state representation."</p>
+      </div>
+	  
+	  
+	  <div class="modal-body">
+	      <h3 class="modal-title fs-5" id="exampleModalLabel">Ansatz Circuit</h3><br>
+		<p> The term 'ansatz' originates from the German word meaning 'assumption' or 'initial guess.' In quantum computing, an ansatz circuit is constructed by combining a set of quantum gates and operations, where certain parameters are left unspecified"</p>
+	  </div>
+	  
+	  <div class="modal-body">
+	      <h3 class="modal-title fs-5" id="exampleModalLabel">PCA</h3><br>
+		<p>PCA is often used as a preprocessing step in machine learning and data analysis to reduce the dimensionality of high-dimensional datasets. By reducing the number of variables, PCA can simplify the data representation, remove noise, and improve computational efficiency.</p>
+	  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+         
               <!-- <h5 class="card-title">Dashboard</h5>-->
               <form>
                 <div class="col">
@@ -69,6 +124,7 @@
                         <option value="2">LInear</option>
                       </select>
                       <br>
+					  
                     </div>
                   </div>
                 </div>
@@ -95,13 +151,31 @@
   </label></div>
 -->
                     <br>
-                    
+                 
                   </div>
                 </div>
               </div>
               <!-- Add more input elements here -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#settingsModal">
-                <i class="fas fa-cog"></i> Azure Settings </button>
+          
+		   <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm ">
+                  <div class="card-header py-2 ">
+                    <h6 class="my-0 fw-normal">Tips </h6>
+                  </div>
+                  <div class="card-body">
+                   <p class="fst-italic fs-6 text">  For a faster demo, choose: <br>
+				   - lower PCA values <br>
+				   - linear entanglement <br>
+				   - Cobyla optmiser
+					
+					</div>
+					</div>
+					</div>
+		  
+		  
+		  
+		  
+		  
             </div>
           </div>
         </div>
@@ -114,26 +188,30 @@
             <button type="button" class="btn btn-primary">
               <i class="fas fa-cog"></i> Initialise Model </button>
           </div>
-          <div class=" row row-cols-1 row-cols-sm-2 g-3">
+       
+		  
             <div class="col">
               <div class="card shadow-sm">
                 <img class="img-fluid rounded mx-auto d-block" src="data:image/png;base64,{{ fmap }}" alt="Circuit">
                 <div class="card-body">
                   <div class="d-inline">
-                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="is a quantum circuit or transformation that encodes classical data into a quantum state. It takes classical input data, such as numerical features or patterns, and maps them to a quantum state representation.">Feature Map Circuit</button>
+           
                   </div>
                 </div>
               </div>
             </div>
+			<br>
             <div class="col">
               <div class="card shadow-sm lh-lg">
                 <img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ ans }}" alt="Circuit">
                 <br>
                 <div class="card-body lh-lg"">
-																									<button type=" button" class="btn btn-outline-primary data-bs-toggle=" tooltip" data-bs-placement="top" title="The term 'ansatz' originates from the German word meaning 'assumption' or 'initial guess.' In quantum computing, an ansatz circuit is constructed by combining a set of quantum gates and operations, where certain parameters are left unspecified">Ansatz Circuit</button>
+				
                 </div>
               </div>
             </div>
+			 <div class="b-example-divider"></div>
+	<div class=" row row-cols-1 row-cols-sm-2 g-3">
             <div class="b-example-divider"></div>
             <div class="b-example-divider"></div>
             <!-- Modal -->
@@ -322,6 +400,8 @@
           <!-- Rest of your HTML code -->
           <!--<button id="start-job-button" class="btn btn-primary">Start Quantum Job</button>-->
           <!-- Rest of your HTML code -->
+		      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#settingsModal">
+                <i class="fas fa-cog"></i> Azure Settings </button>
           <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
           <br>
           <br>
