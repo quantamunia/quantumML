@@ -1,0 +1,893 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <!-- Sidebar with input elements -->
+        <div class="card">
+          <div class="card-body">
+           <!-- <h5 class="card-title">Dashboard</h5>-->
+            <form id="form">
+              
+			  <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-2">
+            <h6 class="my-0 fw-normal">Initial Parameters</h6>
+          </div>
+          <div class="card-body align-items-left ">
+         
+            <!--<div class="form-check">
+  <input class="form-check-input" type="radio" name="dataset" value="iris" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    Iris 
+  </label>
+</div>
+<!--
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="dataset" value="diabetes" id="flexRadioDefault2">
+  <label class="form-check-label" for="flexRadioDefault2">
+    Diabetes
+  </label>
+</div>
+-->
+
+<select class="form-select form-select-sm" aria-label=".form-select-sm example" id="dataset">
+  <option selected="">Datasets</option>
+  <option value="1">Iris</option>
+  <option value="2">Diabetes</option>
+  <option value="3">Breast Cancer</option>
+</select>	
+           
+
+
+<select class="form-select form-select-sm" aria-label=".form-select-sm example" id="train_test">
+  <option selected="">Train_Test_split Values</option>
+  <option value="1">80/20</option>
+  <option value="2">70/30</option>
+  <option value="3">60/40</option>
+</select>	
+
+          
+<select class="form-select form-select-sm" aria-label=".form-select-sm example" id="pca">
+  <option selected="">PCA Values</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>	
+
+        
+
+
+
+
+
+<select class="form-select form-select-sm" aria-label=".form-select-sm example" id="feature_map">
+  <option selected="">Feature Map</option>
+  <option value="1">ZFeatureMap</option>
+  <option value="2">ZZFeatureMap</option>
+  <option value="3">PauliFeatureMap</option>
+</select>	
+
+
+<select class="form-select form-select-sm" aria-label=".form-select-sm example" id="entang">
+  <option selected="">Entanglements</option>
+  <option value="1">Linear</option>
+  <option value="2">LInear 2</option>
+  <option value="3">Linear 3</option>
+</select>	
+
+<select class="form-select form-select-sm" aria-label=".form-select-sm example" id="qmodel">
+  <option selected="">Models</option>
+  <option value="1">QSVM/SVM</option>
+  <option value="2">QSVC/SVC</option>
+  <option value="3">QNN/NN</option>
+</select>	
+
+   
+          </div>
+        </div>
+      </div>
+			 
+
+
+<div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-2">
+            <h6 class="my-0 fw-normal">Ansatz Circuit</h6>
+          </div>
+          <div class="card-body">
+            
+ <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="reps">
+  <option selected="">Reps</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>	
+
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="folds">
+  <option selected="">Folds</option>
+  <option value="10">10</option>
+  <option value="20">20</option>
+  <option value="30">30</option>
+</select>	
+
+
+    
+            
+          </div>
+        </div>
+      </div>			 
+			  
+			  
+			
+
+<div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm ">
+          <div class="card-header py-2 ">
+            <h6 class="my-0 fw-normal">Optimizers</h6>
+          </div>
+          <div class="card-body">
+            
+   <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="optimizer">
+  <option selected="">optimizer type</option>
+  <option value="1">Adam</option>
+  <option value="2">Cobyla</option>
+  <option value="3">Spsa</option>
+</select>	
+
+
+
+
+<!--
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="optimizer" value="coby" id="flexRadioDefault5">
+  <label class="form-check-label" for="flexRadioDefault5">
+    Cobyla 
+  </label>
+</div>
+
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="optimizer" value="spsa" id="flexRadioDefault6">
+  <label class="form-check-label" for="flexRadioDefault6">
+    Spsa
+  </label>
+</div>
+
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="optimizer" value="spsa" id="flexRadioDefault6">
+  <label class="form-check-label" for="flexRadioDefault6">
+    Adam
+  </label>
+</div>
+-->
+<br>
+ <label for="customRange" class="form-label">Max_iterations</label>
+    <input type="range" class="form-range" id="customRange" name="points">
+            
+            
+          </div>
+        </div>
+      </div>			
+			  
+				
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+            
+              <!-- Add more input elements here -->
+			  
+			  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#settingsModal">
+            <i class="fas fa-cog"></i> Azure Settings
+          </button>
+		  
+		  
+           
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <!-- Main content area 
+        <h3>Exploring Quantum Machine Learning</h3>-->
+		<br>
+		 <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4>Exploring Quantum Machine Learning</h4>
+		  <div id="output"></div>
+          <button type="submit" class="btn btn-primary" >
+            <i class="fas fa-cog"></i> Initialise Model
+          </button>
+        </div>
+		
+		</form>
+		
+		
+		
+		
+		
+	
+		
+		
+
+<div class=" row row-cols-1 row-cols-sm-2 g-3">
+
+
+
+
+   
+
+        <div class="col">
+          <div class="card shadow-sm">
+		  
+            
+            
+			<img class="img-fluid rounded mx-auto d-block" src="data:image/png;base64,{{ fmap }}" alt="Circuit">
+			<div class="card-body">
+			
+			    <div class="d-inline">
+			<button type="button" class="btn btn-outline-primary"  data-bs-toggle="tooltip" data-bs-placement="top" title="is a quantum circuit or transformation that encodes classical data into a quantum state. It takes classical input data, such as numerical features or patterns, and maps them to a quantum state representation.">Feature Map Circuit</button>
+			</div>
+		
+			
+
+
+
+
+		
+             
+              
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm lh-lg">
+			<img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ ans }}" alt="Circuit">
+            <br> 
+            <div class="card-body lh-lg"">
+			
+			
+			<button type="button" class="btn btn-outline-primary data-bs-toggle="tooltip" data-bs-placement="top" title="The term 'ansatz' originates from the German word meaning 'assumption' or 'initial guess.' In quantum computing, an ansatz circuit is constructed by combining a set of quantum gates and operations, where certain parameters are left unspecified">Ansatz Circuit</button>
+			
+            </div>
+          </div>
+        </div>
+        
+
+       
+<div class="b-example-divider"></div>
+<div class="b-example-divider"></div>
+
+
+
+
+
+
+
+		  
+      <!-- Modal -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="settingsModalLabel">Azure Quantum Configuration</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="text" class="form-control mb-3" placeholder="Resource ID URL">
+            <select class="form-select">
+			  <option selected="">Backends</option>
+              <option value="option1">ionq</option>
+              <option value="option2">quantinuum</option>
+              <option value="option3">qasm</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+    <div class="col">
+          <div class="card shadow-sm ">
+        
+		<div class="card-body ">
+		  <div class="row lh-lg ">
+ 
+    <div class="col-md-4">
+      Quantum Library:
+	  <br>
+    </div>
+    <div class="col-md-4">
+      <span>IBM Qiskit</span>
+	  <br>
+    </div>
+    <div class="col-md-4">
+      <i class="fa fa-check-circle text-success"></i>
+	  <br>
+    </div>
+  </div>
+  
+  
+  
+  
+  	  <div class="row lh-lg lh-lg">
+  <br>
+    <div class="col-md-4">
+      Cloud Platform :
+	  <br>
+    </div>
+    <div class="col-md-4">
+      <span>Azure Quantum</span>
+	  <br>
+    </div>
+    <div class="col-md-4">
+      <i class="fa fa-check-circle text-success"></i>
+	  <br>
+    </div>
+  </div>
+  
+  
+    	  <div class="row lh-lg lh-lg">
+  <br>
+    <div class="col-md-4">
+      Backend  :
+	  <br>
+    </div>
+    <div class="col-md-4">
+      <span>ionq.simulator</span>
+	  <br>
+    </div>
+    <div class="col-md-4">
+      <i class="fa fa-check-circle text-success"></i>
+	  <br>
+    </div>
+  </div>
+  
+    	  <div class="row lh-lg lh-lg">
+  <br>
+    <div class="col-md-4">
+      dataset size :
+	  <br>
+    </div>
+    <div class="col-md-4">
+      <span>150</span>
+	  <br>
+    </div>
+    <div class="col-md-4">
+      <i class="fa fa-check-circle text-success"></i>
+	  <br>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <div class="row lh-lg lh-lg">
+  <br>
+    <div class="col-md-4">
+      Name of dataset:
+	  <br>
+    </div>
+    <div class="col-md-4">
+      <span id="datasetop"></span>
+	  <br>
+    </div>
+    <div class="col-md-4">
+	
+      <i class="fa fa-check-circle text-success"></i>
+	  <br>
+    </div>
+  </div>
+  <div class="row lh-lg lh-lg">
+  <br>
+    <div class="col-md-4">
+      No.PCA values:
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <span>{{ PCA }}</span>
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <i class="fa fa-check-circle text-success"></i>
+	  <br>
+    </div>
+  </div>
+  <div class="row lh-lg lh-lg">
+  <br>
+    <div class="col-md-4">
+      No. of samples:
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <span>{{ samples }}</span>
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <i class="fa fa-check-circle text-success"></i>
+	  <br>
+    </div>
+  </div>
+  <div class="row lh-lg lh-lg">
+  <br>
+    <div class="col-md-4">
+      Entanglement:
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <span>{{ entang }}</span>
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <i class="fa fa-check-circle text-success"></i>
+	    <br>
+    </div>
+  </div>
+  <div class="row lh-lg lh-lg">
+  <br>
+    <div class="col-md-4">
+      Optimizer type:
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <span>{{ optimiser }}</span>
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <i class="fa fa-check-circle text-success"></i>
+	    <br>
+    </div>
+  </div>
+  <div class="row lh-lg lh-lg">
+  <br>
+    <div class="col-md-4">
+      Type of Model:
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <span>{{ model }}</span>
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <i class="fa fa-check-circle text-success"></i>
+	    <br>
+    </div>
+  </div>
+  <div class="row lh-lg lh-lg">
+  <br>
+    <div class="col-md-4">
+      No. of features:
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <span>{{ features }}</span>
+	    <br>
+    </div>
+    <div class="col-md-4">
+      <i class="fa fa-check-circle text-success"></i>
+	    <br>
+    </div>
+  </div>
+</div>
+
+		
+
+
+
+
+
+
+
+			
+          </div>
+        </div>
+		
+		
+        <div class="col lh-lg">
+          <div class="card shadow-sm lh-lg">
+            
+			<img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph" >
+		      
+              
+            <div class="card-body lh-lg">
+			
+			
+			
+			
+            </div>
+          </div>
+        </div>
+		
+		
+       
+		
+		</div>
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+
+	<!--<div class="col">
+    <div class="card shadow-sm">
+    
+            <div class="card-body">
+			 <h6 class="my-0 fw-normal">..... Training in Progress</h6>
+			   <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph" >
+		       
+              
+              
+            </div>
+
+          </div>
+	</div>
+	-->
+<br>
+
+
+
+		  
+		  
+		  
+		  <br>
+		  
+		  
+      
+           
+			
+			
+
+	  <!-- Rest of your HTML code -->
+
+<!--<button id="start-job-button" class="btn btn-primary">Start Quantum Job</button>-->
+
+<!-- Rest of your HTML code -->
+
+
+<button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
+<br>
+<br>
+<br>
+
+
+<div id="progress-container" style="display: none;">
+  <div class="progress">
+    <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <p id="status-message"></p>
+  <div id="loading-spinner" class="spinner-border" role="status" style="display: none;">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+
+			
+			
+			
+			
+			
+			
+			
+
+          
+		  
+		  <br>
+		  
+		  
+		  <div class=" row row-cols-1 row-cols-sm-2 g-3">
+		  
+		     <div class="col">
+          <div class="card shadow-sm">
+		  
+            
+            <img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='histogram.jpg') }}" alt="Objective function graph" >
+			
+			<div class="card-body">
+			
+			    <div class="d-inline">
+			<button type="button" class="btn btn-outline-primary"  data-bs-toggle="tooltip" data-bs-placement="top" title="The plot_histogram function in Qiskit is used to visualize the measurement results obtained from a quantum circuit execution. The x-axis represents the possible measurement outcomes and the y-axis represents the frequency of each outcome.This visualization helps you understand the probability distribution of the measurement results obtained from your quantum circuit execution.the values 1, 2, 3, 4 along the x-axis of the histogram correspond to the measurement outcomes or bit strings obtained from the quantum circuit.For example, if you have a quantum circuit with two qubits, the measurement outcomes can be 00, 01, 10, or 11, which correspond to the decimal numbers 0, 1, 2, and 3 respectively">Azure Quantum Histogram</button>
+			</div>
+		
+			
+
+
+
+
+		
+             
+              
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm lh-lg">
+			
+            <br> 
+            <div class="card-body lh-lg"">
+			<p>Accuracy, F-measure, Recall, Precision</p>
+			
+			<button type="button" class="btn btn-outline-primary data-bs-toggle="tooltip" data-bs-placement="top" title="">Evaluation Metrics</button>
+			
+            </div>
+          </div>
+        </div>
+		
+		</div>
+		  
+		    
+		  
+		  
+        
+        
+      </div>
+
+
+
+
+</div>
+    </div>
+	
+	
+	
+	
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+
+ <script>
+        function updateGraph() {
+    $.ajax({
+        url: '/get_graph_data',
+        method: 'GET',
+        success: function (response) {
+            var graphSrc = response.graph_src;
+            $('#graph').attr('src', graphSrc);
+        },
+        complete: function () {
+            setTimeout(updateGraph, 2000); // Update the graph every 3 seconds
+        }
+    });
+}
+
+ 
+
+
+
+
+$(document).ready(function() {
+    updateGraph();
+	updateHist();
+    
+});
+
+    </script>
+	
+	<script>
+	function updateHist() {
+    $.ajax({
+        url: '/get_hist',
+        method: 'GET',
+        success: function (response) {
+            var histSrc = response.hist_src;
+            $('#histogram').attr('src', histSrc);
+        },
+        complete: function () {
+            setTimeout(updateHist, 4000); // Update the graph every 3 seconds
+        }
+    });
+	
+}
+
+$(document).ready(function() {
+   
+	updateHist();
+    
+});
+	
+	</script>
+	
+	
+	
+	<!--
+	<script>
+  function updateProgress(progress) {
+  // Update the progress bar width and aria-valuenow attribute
+  const progressBar = document.getElementById('progress-bar');
+  progressBar.style.width = progress * 100 + '%';
+  progressBar.setAttribute('aria-valuenow', progress * 100);
+
+  // Update the status message
+  const statusMessage = document.getElementById('status-message');
+  statusMessage.innerText = 'Progress: ' + Math.round(progress * 100) + '%';
+
+  // Hide the progress bar and button if the progress is 100%
+  if (progress === 1.0) {
+    progressBar.classList.add('progress-bar-striped', 'progress-bar-animated');
+    document.getElementById('start-button').style.display = 'none';
+    progressBar.style.display = 'none';
+  }
+}
+
+  function startQuantumJob() {
+    // Make the progress bar visible
+    document.getElementById('progress-bar').style.display = 'block';
+
+    // Start the quantum job
+    $.getJSON('/quantum_job', function(data) {
+      if (data.result === 'success') {
+        // Job started successfully
+        updateProgress(0); // Reset the progress bar
+        checkQuantumJob(); // Start checking the job progress
+      } else if (data.result === 'training_in_progress') {
+        // Job already in progress, update the progress bar accordingly
+        updateProgress(data.progress);
+        checkQuantumJob(); // Continue checking the job progress
+      } else {
+        // Job not started or encountered an error
+        console.log('Job not started or error occurred.');
+      }
+    });
+  }
+
+  function checkQuantumJob() {
+    $.getJSON('/quantum_job', function(data) {
+      if (data.result === 'success') {
+        // Job completed successfully
+        updateProgress(data.progress);
+        console.log('Job completed:', data.data);
+      } else if (data.result === 'training_in_progress') {
+        // Job still in progress
+        updateProgress(data.progress);
+        setTimeout(checkQuantumJob, 1000); // Check again after 1 second
+      } else {
+        // Training not started or encountered an error
+        console.log('Training not started or error occurred.');
+      }
+    });
+  }
+
+  $(document).ready(function() {
+    // Attach click event handler to the Start button
+    $('#start-button').click(startQuantumJob);
+  });
+</script>
+-->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('#form').on('submit',function(e){
+        $.ajax({
+          data : {
+            dataset : $('#dataset').val(),
+			train_test : $('#train_test').val(),
+			pca : $('#pca').val(),
+			feature_map : $('#feature_map').val(),
+			entang : $('#entang').val(),
+			qmodel : $('#qmodel').val(),
+			reps : $('#reps').val(),
+			folds : $('#folds').val(),
+			optimizer : $('#optimizer').val(),
+			maxiter : $('#customRange').val(),
+          },
+          type : 'POST',
+          url : '/initialize'
+        })
+        .done(function(data){
+          $('#datasetop').text(data.datasetop).show();
+        });
+        e.preventDefault();
+      });
+    });
+</script>
+
+
+<script>
+function updateProgress(progress) {
+  const progressBar = document.getElementById('progress-bar');
+  progressBar.style.width = progress + '%';
+  progressBar.setAttribute('aria-valuenow', progress);
+
+  const statusMessage = document.getElementById('status-message');
+  statusMessage.innerText = 'Progress: ' + progress + '%';
+
+  if (progress === 100) {
+    progressBar.classList.remove('progress-bar-animated');
+  }
+}
+
+document.getElementById('start-button').addEventListener('click', function() {
+  // Show the progress container
+  document.getElementById('progress-container').style.display = 'block';
+
+  // Show the loading spinner
+  document.getElementById('loading-spinner').style.display = 'block';
+
+  // Reset the progress bar
+  updateProgress(0);
+
+  // Perform the quantum job
+  $.getJSON('/quantum_job', function(data) {
+    // Hide the loading spinner and hide button
+	document.getElementById('start-button').style.display = 'none';  
+    document.getElementById('loading-spinner').style.display = 'none';
+	
+	  
+
+    if (data.result === 'success') {
+      // Job completed successfully
+      updateProgress(100);
+      console.log('Job completed:', data.data);
+    } else if (data.result === 'training_in_progress') {
+      // Update progress asynchronously
+      setTimeout(function checkProgress() {
+        $.getJSON('/quantum_job', function(progressData) {
+          if (progressData.result === 'training_in_progress') {
+            // Job still in progress
+            updateProgress(progressData.progress);
+            setTimeout(checkProgress, 1000);  // Check again after 1 second
+          } else {
+            // Job completed or encountered an error
+            if (progressData.result === 'success') {
+              updateProgress(100);
+              console.log('Job completed:', progressData.data);
+            } else {
+              console.log('Training not started or error occurred.');
+            }
+          }
+        });
+      }, 1000);
+    } else {
+      // Training not started or encountered an error
+      console.log('Training not started or error occurred.');
+    }
+  });
+});
+</script>
+
+
+
+</body></html>
