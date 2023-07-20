@@ -70,35 +70,37 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 <br><br>
          
               <!-- <h5 class="card-title">Dashboard</h5>-->
-              <form>
+              <form method="POST" action="/"> 
                 <div class="col">
                   <div class="card mb-4 rounded-3 shadow-sm">
                     <div class="card-header py-2">
                       <h6 class="my-0 fw-normal">Initial Parameters</h6>
                     </div>
                     <div class="card-body align-items-left ">
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="model">
                         <option selected="">Models</option>
-                        <option value="1">VQC/MLP</option>
-                        <option value="1">QSVM/SVM</option>
-                        <option value="2">QSVC/SVC</option>
-                        <option value="3">QNN/NN</option>
+                        <option value="VQC/MLP">VQC/MLP</option>
+                        <option value="QSVM/SVM">QSVM/SVM</option>
+                        <option value="QSVC/SVC">QSVC/SVC</option>
+                        <option value="VQC/LR">VQC/LR</option>
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="dataset">
                         <option selected="">Datasets</option>
-                        <option value="1">Iris</option>
-                        <option value="2">Diabetes</option>
-                        <option value="3">Breast Cancer</option>
+                        <option value="iris">Iris</option>
+						<option value="wine">Wine</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="cancer">Breast Cancer</option>
+						
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="split">
                         <option selected="">Train_Test_split Values</option>
-                        <option value="1">80/20</option>
-                        <option value="2">70/30</option>
+                        <option value="80/20">80/20</option>
+                        <option value="70/30">70/30</option>
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca">
                         <option selected="">PCA Values</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -111,35 +113,35 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="10">10</option>
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="featuremap">
                         <option selected="">Feature Map</option>
-                        <option value="1">ZFeatureMap</option>
-                        <option value="2">ZZFeatureMap</option>
-                        <option value="3">PauliFeatureMap</option>
+                        <option value="z">ZFeatureMap</option>
+                        <option value="zz">ZZFeatureMap</option>
+                        <option value="pauli">PauliFeatureMap</option>
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang">
                         <option selected="">Entanglements</option>
-                        <option value="1">Full</option>
-                        <option value="2">LInear</option>
+                        <option value="full">Full</option>
+                        <option value="linear">LInear</option>
                       </select>
                       <br>
 					  
                     </div>
                   </div>
                 </div>
-              </form>
+            
               <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm ">
                   <div class="card-header py-2 ">
                     <h6 class="my-0 fw-normal">Optimizers</h6>
                   </div>
                   <div class="card-body">
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="optimizer">
                       <option selected="">optimizer type</option>
-                      <option value="1">Adam</option>
-                      <option value="2">Cobyla</option>
-                      <option value="3">Spsa</option>
+                      <option value="adam">Adam</option>
+                      <option value="cobyla">Cobyla</option>
+                      <option value="spsa">Spsa</option>
                     </select>
                     <!--
     <div class="form-check"><input class="form-check-input" type="radio" name="optimizer" value="coby" id="flexRadioDefault5"><label class="form-check-label" for="flexRadioDefault5">
@@ -185,10 +187,10 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           <br>
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h4>Exploring Quantum Machine Learning</h4>
-            <button type="button" class="btn btn-primary">
+                <button type="submit" type="button" class="btn btn-primary">
               <i class="fas fa-cog"></i> Initialise Model </button>
           </div>
-       
+         </form>
 		  
             <div class="col">
               <div class="card shadow-sm">
