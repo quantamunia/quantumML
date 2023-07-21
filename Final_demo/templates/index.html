@@ -299,7 +299,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                     <div class="col-md-4"> Name of dataset: <br>
                     </div>
                     <div class="col-md-4">
-                      <span>{{ name }}</span>
+                      <span>{{ dname }}</span>
                       <br>
                     </div>
                     <div class="col-md-4">
@@ -312,7 +312,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                     <div class="col-md-4"> No.PCA values: <br>
                     </div>
                     <div class="col-md-4">
-                      <span>{{ PCA }}</span>
+                      <span>{{ pcano }}</span>
                       <br>
                     </div>
                     <div class="col-md-4">
@@ -338,7 +338,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                     <div class="col-md-4"> Entanglement: <br>
                     </div>
                     <div class="col-md-4">
-                      <span>{{ entang }}</span>
+                      <span>{{ ent }}</span>
                       <br>
                     </div>
                     <div class="col-md-4">
@@ -351,7 +351,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                     <div class="col-md-4"> Optimizer type: <br>
                     </div>
                     <div class="col-md-4">
-                      <span>{{ optimiser }}</span>
+                      <span>{{ opt }}</span>
                       <br>
                     </div>
                     <div class="col-md-4">
@@ -364,7 +364,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                     <div class="col-md-4"> Type of Model: <br>
                     </div>
                     <div class="col-md-4">
-                      <span>{{ model }}</span>
+                      <span>{{ mod }}</span>
                       <br>
                     </div>
                     <div class="col-md-4">
@@ -377,7 +377,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                     <div class="col-md-4"> No. of features: <br>
                     </div>
                     <div class="col-md-4">
-                      <span>{{ features }}</span>
+                      <span>{{ f_no }}</span>
                       <br>
                     </div>
                     <div class="col-md-4">
@@ -398,10 +398,11 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           <!--<div class="col"><div class="card shadow-sm"><div class="card-body"><h6 class="my-0 fw-normal">..... Training in Progress</h6><img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph" ></div></div></div>
 	-->
           <br>
+		  
+		  
           <br>
-          <!-- Rest of your HTML code -->
-          <!--<button id="start-job-button" class="btn btn-primary">Start Quantum Job</button>-->
-          <!-- Rest of your HTML code -->
+		   
+  
 		      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#settingsModal">
                 <i class="fas fa-cog"></i> Azure Settings </button>
           <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
@@ -434,6 +435,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 <br>
                 <div class="card-body lh-lg"">
 																																																																														<p>Accuracy, F-measure, Recall, Precision</p>
+																																																																														<img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ bar }}" alt="Circuit">
 																																																																														<button type=" button" class="btn btn-outline-primary data-bs-toggle=" tooltip" data-bs-placement="top" title="">Evaluation Metrics</button>
                 </div>
               </div>
