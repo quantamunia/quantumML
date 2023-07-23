@@ -325,7 +325,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                     <div class="col-md-4"> No. of samples: <br>
                     </div>
                     <div class="col-md-4">
-                      <span>{{ samples }}</span>
+                      <span>{{accuracy}}  </span>
                       <br>
                     </div>
                     <div class="col-md-4">
@@ -398,15 +398,27 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           <!--<div class="col"><div class="card shadow-sm"><div class="card-body"><h6 class="my-0 fw-normal">..... Training in Progress</h6><img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph" ></div></div></div>
 	-->
           <br>
-		  
-		  
+		  <p> scores from MLP </p>
+		  {{accuracy}}  
+		  <br>
+		   {{f1}}  
           <br>
-		   
-  
+		    {{precision}}  
+			<br>
+			 {{recall}}  
+			 <br>
+			 <br>
+			 
+			 
+			 
+			 
+			 {{accuracy_vqc}}  <br> {{f1_vqc}} <br> {{precision_vqc}} <br> {{recall_vqc}}
+			 
 		      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#settingsModal">
                 <i class="fas fa-cog"></i> Azure Settings </button>
           <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
           <br>
+		  
           <br>
           <br>
           <div id="progress-container" style="display: none;">
