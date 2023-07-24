@@ -244,6 +244,9 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               <div class="card shadow-sm ">
                 <div class="card-body ">
                   <div class="row lh-lg ">
+				   <h4>Model : {{ mod }}</h4>
+				   <br><br> <br><br>
+				    
                     <div class="col-md-4"> Quantum Library: <br>
                     </div>
                     <div class="col-md-4">
@@ -412,7 +415,11 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 			 
 			 
 			 
-			 {{accuracy_vqc}}  <br> {{f1_vqc}} <br> {{precision_vqc}} <br> {{recall_vqc}}
+			 {% if training_done %}
+        <!-- Display the training metrics here -->
+				<h2>Training Metrics</h2>
+				{{bar}}
+			{% endif %}
 			 
 		      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#settingsModal">
                 <i class="fas fa-cog"></i> Azure Settings </button>
@@ -437,6 +444,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 <img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='histogram.jpg') }}" alt="Objective function graph">
                 <div class="card-body">
                   <div class="d-inline">
+				  
                     <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="The plot_histogram function in Qiskit is used to visualize the measurement results obtained from a quantum circuit execution. The x-axis represents the possible measurement outcomes and the y-axis represents the frequency of each outcome.This visualization helps you understand the probability distribution of the measurement results obtained from your quantum circuit execution.the values 1, 2, 3, 4 along the x-axis of the histogram correspond to the measurement outcomes or bit strings obtained from the quantum circuit.For example, if you have a quantum circuit with two qubits, the measurement outcomes can be 00, 01, 10, or 11, which correspond to the decimal numbers 0, 1, 2, and 3 respectively">Azure Quantum Histogram</button>
                   </div>
                 </div>
@@ -447,7 +455,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 <br>
                 <div class="card-body lh-lg"">
 																																																																														<p>Accuracy, F-measure, Recall, Precision</p>
-																																																																														<img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ bar }}" alt="Circuit">
+																																																																														<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" alt="Objective function graph">
 																																																																														<button type=" button" class="btn btn-outline-primary data-bs-toggle=" tooltip" data-bs-placement="top" title="">Evaluation Metrics</button>
                 </div>
               </div>
@@ -457,6 +465,10 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
       </div>
     </div>
     </div>
+	
+	
+	
+	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -476,6 +488,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
       $(document).ready(function() {
         updateGraph();
         updateHist();
+		barChart();
       });
     </script>
     <script>
@@ -496,6 +509,29 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         updateHist();
       });
     </script>
+	
+	
+	  <script>
+      function barChart() {
+        $.ajax({
+          url: '/get_barchart',
+          method: 'GET',
+          success: function(response) {
+            var barSrc = response.bar_src;
+            $('#bchart').attr('src', barSrc);
+          },
+          complete: function() {
+            setTimeout(barChart, 3000); // Update the graph every 3 seconds
+          }
+        });
+      }
+      $(document).ready(function() {
+        barChart();
+      });
+    </script>
+	
+	
+	
     <!--
 	<script>
   function updateProgress(progress) {
@@ -613,5 +649,6 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         });
       });
     </script>
+	
   </body>
 </html>
