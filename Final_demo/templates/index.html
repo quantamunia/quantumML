@@ -388,19 +388,23 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col lh-lg ">
-			 {% if mod == 'QSVC/SVC' or mode == 'QSVM/SVM'   %}
+			
               <div class="card shadow-sm lh-lg d-flex justify-content-center align-items-center lh-lg">
-			 <br> <br>  <br>  <br>  <br>  
+			 <br> <br>  <br>  <br>  
+			  {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM'   %}
+			  <h6 class="lh-lg"> Training Model....Please wait </h6>
 			   <div class="spinner-border spinner-border-custom  text-primary  " role="status">
 					<span class="sr-only">Loading...</span>
 				</div>
-				   <br>  <br>  <br> <br>  
+				
 			  {% else %}
                 <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph">
-			  {% endif %}
-                <div class="card-body lh-lg"></div>
+			  {% endif %}   <br>  <br>  <br> <br>  
+                <div class="card-body lh-lg">
+</div>
               </div>
             </div>
+			
           </div>
           <!--<div class="col"><div class="card shadow-sm"><div class="card-body"><h6 class="my-0 fw-normal">..... Training in Progress</h6><img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph" ></div></div></div>
 	-->
