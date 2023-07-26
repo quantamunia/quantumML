@@ -392,8 +392,12 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col lh-lg">
+			 {% if mod == 'QSVC/SVC'  %}
               <div class="card shadow-sm lh-lg">
+			  
+			  {% else %}
                 <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph">
+			  {% endif %}
                 <div class="card-body lh-lg"></div>
               </div>
             </div>
