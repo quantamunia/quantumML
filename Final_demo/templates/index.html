@@ -156,12 +156,12 @@
 		  
             <div class="card-body">
 			
-					  <!-- Button trigger modal -->
+					  <!-- Button trigger modal 
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 </button>
 
-<!-- Modal -->
+<!-- Modal 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -203,8 +203,8 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
       </div>
     </div>
   </div>
-</div>
-<br><br>
+</div>-->
+
          
               <!-- <h5 class="card-title">Dashboard</h5>-->
               <form method="POST" action="/" onsubmit="return validateForm()"> 
@@ -321,6 +321,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           </div>
          </form>
 		  
+		   {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM' or mod == 'VQC/MLP' or mod =='VQC/LR' %}
             <div class="col">
               <div class="card shadow-sm">
                 <img class="img-fluid rounded mx-auto d-block" src="data:image/png;base64,{{ fmap }}" alt="Circuit">
@@ -622,7 +623,12 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
     </div>
     </div>
 	
+	{%else %}
+	Select parameters  and run the the application.  The code is available via <a href="#" >API</a> for testing<br><br><br>
+	<img class="splash-image" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Quantum_Machine_Learning.jpg" alt="Quantum Machine Learning">
 	
+	
+	{%endif%}
 	
 	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
