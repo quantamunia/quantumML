@@ -156,12 +156,12 @@
 		  
             <div class="card-body">
 			
-					  <!-- Button trigger modal -->
+					  <!-- Button trigger modal 
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 </button>
 
-<!-- Modal -->
+<!-- Modal 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -203,18 +203,18 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
       </div>
     </div>
   </div>
-</div>
-<br><br>
+</div>-->
+
          
               <!-- <h5 class="card-title">Dashboard</h5>-->
-              <form method="POST" action="/"> 
+              <form method="POST" action="/" onsubmit="return validateForm()"> 
                 <div class="col">
                   <div class="card mb-4 rounded-3 shadow-sm">
                     <div class="card-header py-2">
                       <h6 class="my-0 fw-normal">Initial Parameters</h6>
                     </div>
                     <div class="card-body align-items-left ">
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="model" id="modelSelect">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="model" id="modelSelect" required>
                         <option selected="">Models</option>
                         <option value="VQC/MLP">VQC/MLP</option>
                         <option value="QSVM/SVM">QSVM/SVM</option>
@@ -222,7 +222,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="VQC/LR">VQC/LR</option>
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="dataset">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="dataset" required>
                         <option selected="">Datasets</option>
                         <option value="iris">Iris</option>
 						<option value="wine">Wine</option>
@@ -231,13 +231,13 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 						
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="split">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="split" required>
                         <option selected="">Train_Test_split Values</option>
                         <option value="80/20">80/20</option>
                         <option value="70/30">70/30</option>
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca" required>
                         <option selected="">PCA Values</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -250,14 +250,14 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="10">10</option>
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="featuremap">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="featuremap" required>
                         <option selected="">Feature Map</option>
                         <option value="z">ZFeatureMap</option>
                         <option value="zz">ZZFeatureMap</option>
                         <option value="pauli">PauliFeatureMap</option>
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" >
                         <option selected="">Entanglements</option>
                         <option value="full">Full</option>
                         <option value="linear">LInear</option>
@@ -280,15 +280,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       <option value="cobyla">Cobyla</option>
                       <option value="spsa">Spsa</option>
                     </select>
-                    <!--
-    <div class="form-check"><input class="form-check-input" type="radio" name="optimizer" value="coby" id="flexRadioDefault5"><label class="form-check-label" for="flexRadioDefault5">
-    Cobyla 
-  </label></div><div class="form-check"><input class="form-check-input" type="radio" name="optimizer" value="spsa" id="flexRadioDefault6"><label class="form-check-label" for="flexRadioDefault6">
-    Spsa
-  </label></div><div class="form-check"><input class="form-check-input" type="radio" name="optimizer" value="spsa" id="flexRadioDefault6"><label class="form-check-label" for="flexRadioDefault6">
-    Adam
-  </label></div>
--->
+                   
                     <br>
                  
                   </div>
@@ -329,6 +321,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           </div>
          </form>
 		  
+		   {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM' or mod == 'VQC/MLP' or mod =='VQC/LR' %}
             <div class="col">
               <div class="card shadow-sm">
                 <img class="img-fluid rounded mx-auto d-block" src="data:image/png;base64,{{ fmap }}" alt="Circuit">
@@ -340,6 +333,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               </div>
             </div>
 			<br>
+			{% if mod == 'VQC/MLP' or mod == 'VQC/LR'   %}
             <div class="col">
               <div class="card shadow-sm lh-lg">
                 <img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ ans }}" alt="Circuit">
@@ -350,10 +344,11 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               </div>
             </div>
 			 <div class="b-example-divider"></div>
-	<div class=" row row-cols-1 row-cols-sm-2 g-3">
+			 {% endif   %}
+			<div class=" row row-cols-1 row-cols-sm-2 g-3">
             <div class="b-example-divider"></div>
             <div class="b-example-divider"></div>
-            <!-- Modal -->
+            <!-- Modal 
             <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -376,7 +371,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
-            </div>
+            </div>-->
             <div class="col">
               <div class="card shadow-sm ">
                 <div class="card-body lh-lg lh-lg ">
@@ -519,9 +514,9 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
             <div class="col lh-lg ">
 			
               <div class="card shadow-sm lh-lg d-flex justify-content-center align-items-center lh-lg">
-			
+			 
 			  {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM'   %}
-			   <br> <br>  <br>  <br>  
+			  <br> <br>  <br>  <br>  
 			  	
 					<!--<h6 class="lh-lg "> Training Model....Please wait </h6>-->
 				<div  id="first_spin"  >
@@ -556,47 +551,65 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 				</div>
 			</div>
 			</div>
-			 <br>  <br>  <br> <br>  
+			 <br><br>  <br>  <br> <br>  
 			  {% else %}
                 <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph">
-			  {% endif %}  
-                <div class="card-body lh-lg">
-</div>
+				
+			  {% endif %}   
+                
+				
+				
+				<div class="card-body lh-lg">
+				</div>
               </div>
             </div>
 			
           </div>
           <!--<div class="col"><div class="card shadow-sm"><div class="card-body"><h6 class="my-0 fw-normal">..... Training in Progress</h6><img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph" ></div></div></div>
 	-->
-          <br>
-		  <p> scores from MLP </p>
-		  {{accuracy}}  
-		  <br>
-		   {{f1}}  
-          <br>
-		    {{precision}}  
-			<br>
-			 {{recall}}  
-			 <br>
-			 <br>
+          
 			 
 			 
-			 
-			 
-			 {% if training_done %}
+			  
         <!-- Display the training metrics here -->
-				<h2>Training Metrics</h2>
-				{{bar}}
-			{% endif %}
+			
 			 
-		      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#settingsModal">
-                <i class="fas fa-cog"></i> Azure Settings </button>
-          <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
+		      
+        
+      
+       
+          <br>
+          <div class=" row row-cols-1 row-cols-sm-2 g-3">
+		  
+		   <div class="col">
+              <div class="card shadow-sm lh-lg">
+                <br>
+                <div class="card-body lh-lg"">
+							
+							<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" alt="Objective function graph">
+					        <button type=" button" class="btn btn-outline-primary data-bs-toggle=" tooltip" data-bs-placement="top" title="">Evaluation Metrics</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='histogram.jpg') }}" alt="Objective function graph">
+                <div class="card-body">
+                  <div class="d-inline">
+				  
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="The plot_histogram function in Qiskit is used to visualize the measurement results obtained from a quantum circuit execution. The x-axis represents the possible measurement outcomes and the y-axis represents the frequency of each outcome.This visualization helps you understand the probability distribution of the measurement results obtained from your quantum circuit execution.the values 1, 2, 3, 4 along the x-axis of the histogram correspond to the measurement outcomes or bit strings obtained from the quantum circuit.For example, if you have a quantum circuit with two qubits, the measurement outcomes can be 00, 01, 10, or 11, which correspond to the decimal numbers 0, 1, 2, and 3 respectively">Confusion Matrix</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+		  
+		    <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
           <br>
 		  
           <br>
-          <br>
-          <div id="progress-container" style="display: none;">
+		     <div id="progress-container" style="display: none;">
             <div class="progress">
               <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
@@ -605,36 +618,17 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               <span class="sr-only">Loading...</span>
             </div>
           </div>
-          <br>
-          <div class=" row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card shadow-sm">
-                <img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='histogram.jpg') }}" alt="Objective function graph">
-                <div class="card-body">
-                  <div class="d-inline">
-				  
-                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="The plot_histogram function in Qiskit is used to visualize the measurement results obtained from a quantum circuit execution. The x-axis represents the possible measurement outcomes and the y-axis represents the frequency of each outcome.This visualization helps you understand the probability distribution of the measurement results obtained from your quantum circuit execution.the values 1, 2, 3, 4 along the x-axis of the histogram correspond to the measurement outcomes or bit strings obtained from the quantum circuit.For example, if you have a quantum circuit with two qubits, the measurement outcomes can be 00, 01, 10, or 11, which correspond to the decimal numbers 0, 1, 2, and 3 respectively">Azure Quantum Histogram</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm lh-lg">
-                <br>
-                <div class="card-body lh-lg"">
-																																																																														<p>Accuracy, F-measure, Recall, Precision</p>
-																																																																														<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" alt="Objective function graph">
-																																																																														<button type=" button" class="btn btn-outline-primary data-bs-toggle=" tooltip" data-bs-placement="top" title="">Evaluation Metrics</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
     </div>
 	
+	{%else %}
+	Select parameters  and run the the application.  The code is available via <a href="#" >API</a> for testing<br><br><br>
+	<img class="splash-image" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Quantum_Machine_Learning.jpg" alt="Quantum Machine Learning">
 	
+	
+	{%endif%}
 	
 	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -864,6 +858,7 @@ numb.textContent = counter + "%";
     q_spinner();
 </script>
 	
+
 	<script>
   document.getElementById("modelSelect").addEventListener("change", function() {
     const optimizerSection = document.getElementById("optimizerSection");
@@ -876,10 +871,40 @@ numb.textContent = counter + "%";
     }
   });
 </script>
-	
-	
-	
+
+<script>
+  function validateForm() {
+    const modelSelect = document.getElementById('modelSelect');
+    const datasetSelect = document.getElementsByName('dataset')[0];
+    const featureMapSelect = document.getElementsByName('featuremap')[0];
+    const entangSelect = document.getElementsByName('entang')[0];
+    const splitSelect = document.getElementsByName('split')[0];
+    const pcaSelect = document.getElementsByName('pca')[0];
+    const optimizerSelect = document.getElementsByName('optimizer')[0];
+
+    if (
+      modelSelect.value === '' ||
+      datasetSelect.value === '' ||
+      featureMapSelect.value === '' ||
+      entangSelect.value === '' ||
+      splitSelect.value === '' ||
+      pcaSelect.value === '' ||
+      optimizerSelect.value === ''
+    ) {
+      alert('Please select all required fields.');
+      return false; // Prevent form submission if required fields are not selected
+    }
+  }
+</script>
+
+
+
+
+
+
 	
 	
   </body>
 </html>
+
+<!--
