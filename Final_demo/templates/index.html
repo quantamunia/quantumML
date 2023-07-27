@@ -214,7 +214,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       <h6 class="my-0 fw-normal">Initial Parameters</h6>
                     </div>
                     <div class="card-body align-items-left ">
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="model">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="model" id="modelSelect">
                         <option selected="">Models</option>
                         <option value="VQC/MLP">VQC/MLP</option>
                         <option value="QSVM/SVM">QSVM/SVM</option>
@@ -268,7 +268,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                   </div>
                 </div>
             
-              <div class="col">
+              <div class="col" id="optimizerSection" style="display: block;">
                 <div class="card mb-4 rounded-3 shadow-sm ">
                   <div class="card-header py-2 ">
                     <h6 class="my-0 fw-normal">Optimizers</h6>
@@ -296,7 +296,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               </div>
               <!-- Add more input elements here -->
           
-		   <div class="col">
+		   <div class="col ">
                 <div class="card mb-4 rounded-3 shadow-sm ">
                   <div class="card-header py-2 ">
                     <h6 class="my-0 fw-normal">Tips </h6>
@@ -863,6 +863,22 @@ numb.textContent = counter + "%";
     // Call the q_spinner function to trigger the classification process
     q_spinner();
 </script>
+	
+	<script>
+  document.getElementById("modelSelect").addEventListener("change", function() {
+    const optimizerSection = document.getElementById("optimizerSection");
+    const selectedModel = this.value;
+
+    if (selectedModel === "QSVM/SVM" || selectedModel === "QSVC/SVC") {
+      optimizerSection.style.display = "none"; // Hide the "Optimizers" section
+    } else {
+      optimizerSection.style.display = "block"; // Show the "Optimizers" section
+    }
+  });
+</script>
+	
+	
+	
 	
 	
   </body>
