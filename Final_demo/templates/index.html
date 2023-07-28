@@ -581,7 +581,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           <br>
           <div class=" row row-cols-1 row-cols-sm-2 g-3">
 		  
-		   <div class="col">
+		   <div class="col" id="colBlock" style="display: none;">
               <div class="card shadow-sm lh-lg">
                 <br>
                 <div class="card-body lh-lg"">
@@ -759,6 +759,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 </script>
 -->
     <script>
+	
       function updateProgress(progress) {
         const progressBar = document.getElementById('progress-bar');
         progressBar.style.width = progress + '%';
@@ -824,6 +825,17 @@ numb.textContent = counter + "%";
 }, 80);</script>
 	
 	<script type='text/javascript'>
+	
+	function handleSpinnerValue() {
+            const colBlock = document.getElementById('colBlock');
+			 colBlock.style.display = "block";
+
+            
+        }
+	
+	
+
+		
     // Function to hide the first spinner and display the second spinner
     function showSecondSpinner() {
         const first_spin = document.getElementById("first_spin");
@@ -842,6 +854,8 @@ numb.textContent = counter + "%";
 
                 if (spinnerValue === "success") {
                     showSecondSpinner(); // Show the second spinner on successful classification
+					setTimeout(handleSpinnerValue, 8000);
+					
                 } else if (spinnerValue === "training") {
                     console.log("Classification is still in progress. Display a message or handle accordingly.");
 					setTimeout(q_spinner, 2000);
@@ -856,6 +870,7 @@ numb.textContent = counter + "%";
 
     // Call the q_spinner function to trigger the classification process
     q_spinner();
+	
 </script>
 	
 
