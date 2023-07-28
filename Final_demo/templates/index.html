@@ -237,7 +237,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="70/30">70/30</option>
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca" required>
+                      <i class="fa fa-question-circle me-2" style="color:#0d6efd"></i> <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca" required>
                         <option selected="">PCA Values</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -250,6 +250,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="10">10</option>
                       </select>
                       <br>
+					  <i class="fa fa-question-circle me-2" style="color:#0d6efd"></i>
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="featuremap" required>
                         <option selected="">Feature Map</option>
                         <option value="z">ZFeatureMap</option>
@@ -257,6 +258,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="pauli">PauliFeatureMap</option>
                       </select>
                       <br>
+					  <i class="fa fa-question-circle me-2" style="color:#0d6efd"></i>
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" >
                         <option selected="">Entanglements</option>
                         <option value="full">Full</option>
@@ -329,18 +331,26 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                   <div class="d-inline">
            
                   </div>
+				   <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"></i> 
                 </div>
+				 
               </div>
+			 
             </div>
+			
 			<br>
 			{% if mod == 'VQC/MLP' or mod == 'VQC/LR'   %}
             <div class="col">
               <div class="card shadow-sm lh-lg">
                 <img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ ans }}" alt="Circuit">
                 <br>
-                <div class="card-body lh-lg"">
-				
+                <div class="card-body">
+				 <div class="d-inline">
+           
+                  </div>
+				<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"></i>
                 </div>
+				 
               </div>
             </div>
 			 <div class="b-example-divider"></div>
@@ -587,25 +597,31 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 <div class="card-body lh-lg"">
 							
 							<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" alt="Objective function graph">
-					        <button type=" button" class="btn btn-outline-primary data-bs-toggle=" tooltip" data-bs-placement="top" title="">Evaluation Metrics</button>
+					          <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"></i> 
+							 
                 </div>
               </div>
             </div>
-            <div class="col">
+			
+           <!-- <div class="col">
               <div class="card shadow-sm">
                 <img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='histogram.jpg') }}" alt="Objective function graph">
                 <div class="card-body">
                   <div class="d-inline">
 				  
-                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="The plot_histogram function in Qiskit is used to visualize the measurement results obtained from a quantum circuit execution. The x-axis represents the possible measurement outcomes and the y-axis represents the frequency of each outcome.This visualization helps you understand the probability distribution of the measurement results obtained from your quantum circuit execution.the values 1, 2, 3, 4 along the x-axis of the histogram correspond to the measurement outcomes or bit strings obtained from the quantum circuit.For example, if you have a quantum circuit with two qubits, the measurement outcomes can be 00, 01, 10, or 11, which correspond to the decimal numbers 0, 1, 2, and 3 respectively">Confusion Matrix</button>
+                  <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"></i>
+					
+					
+					<br>
+					<button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="The plot_histogram function in Qiskit is used to visualize the measurement results obtained from a quantum circuit execution. The x-axis represents the possible measurement outcomes and the y-axis represents the frequency of each outcome.This visualization helps you understand the probability distribution of the measurement results obtained from your quantum circuit execution.the values 1, 2, 3, 4 along the x-axis of the histogram correspond to the measurement outcomes or bit strings obtained from the quantum circuit.For example, if you have a quantum circuit with two qubits, the measurement outcomes can be 00, 01, 10, or 11, which correspond to the decimal numbers 0, 1, 2, and 3 respectively">Confusion Matrix</button>
                   </div>
                 </div>
               </div>
-            </div>
+            </div>-->
            
           </div>
 		  
-		    <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
+		  <!--  <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>-->
           <br>
 		  
           <br>
@@ -856,7 +872,12 @@ numb.textContent = counter + "%";
                     showSecondSpinner(); // Show the second spinner on successful classification
 					setTimeout(handleSpinnerValue, 8000);
 					
-                } else if (spinnerValue === "training") {
+                } else if (spinnerValue === "completed"){
+				   
+				   setTimeout(handleSpinnerValue, 3000);
+				
+				
+				} else if (spinnerValue === "training") {
                     console.log("Classification is still in progress. Display a message or handle accordingly.");
 					setTimeout(q_spinner, 2000);
                 } else {
