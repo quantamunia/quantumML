@@ -226,8 +226,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option selected="">Datasets</option>
                         <option value="iris">Iris</option>
 						<option value="wine">Wine</option>
-                        <option value="diabetes">Diabetes</option>
-                        <option value="cancer">Breast Cancer</option>
+                        
 						
                       </select>
                       <br>
@@ -237,20 +236,15 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="70/30">70/30</option>
                       </select>
                       <br>
-                      <i class="fa fa-question-circle me-2" style="color:#0d6efd"></i> <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca" required>
+                      <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="Select PCA of 2 for training less than 3 minutes. "></i> <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca" required>
                         <option selected="">PCA Values</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
+                        
                       </select>
                       <br>
-					  <i class="fa fa-question-circle me-2" style="color:#0d6efd"></i>
+					  <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="ZFeatureMap -> less complex (faster training) <br> <br> ZZ & PauliFeatureMap-> complex (slow training)  " data-content="This is some additional information.<br>You can add more content here."></i>
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="featuremap" required>
                         <option selected="">Feature Map</option>
                         <option value="z">ZFeatureMap</option>
@@ -258,11 +252,11 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="pauli">PauliFeatureMap</option>
                       </select>
                       <br>
-					  <i class="fa fa-question-circle me-2" style="color:#0d6efd"></i>
+					  <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="Select 'Linear' for faster training"></i>
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" >
                         <option selected="">Entanglements</option>
                         <option value="full">Full</option>
-                        <option value="linear">LInear</option>
+                        <option value="linear">Linear</option>
                       </select>
                       <br>
 					  
@@ -331,7 +325,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                   <div class="d-inline">
            
                   </div>
-				   <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"></i> 
+				   <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="A feature map serves as a bridge between classical and quantum data representations, allowing quantum computers to operate on classical data effectively and leverage the unique capabilities of quantum computation to enhance machine learning tasks. <br><br> It maps classical data points to a quantum state or quantum circuit.  This transformation allows quantum algorithms to process and analyze complex data patterns that may not be easily separable in the classical feature "></i> 
                 </div>
 				 
               </div>
@@ -348,14 +342,14 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 				 <div class="d-inline">
            
                   </div>
-				<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"></i>
+				<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="In simpler terms, an ansatz circuit is a special kind of instruction set used in quantum computing. It is designed to create an approximate quantum state that helps solve problems faster. The circuit has adjustable knobs (parameters) that can be tweaked to get a better result. By playing with these knobs, quantum computers can find answers to complex problems more efficiently. It's like a tool that quantum computers use to make educated guesses and get closer to the correct answer step by step."></i>
                 </div>
 				 
               </div>
             </div>
 			 <div class="b-example-divider"></div>
 			 {% endif   %}
-			<div class=" row row-cols-1 row-cols-sm-2 g-3">
+			<div class="row row-cols-1 row-cols-sm-2 g-3">
             <div class="b-example-divider"></div>
             <div class="b-example-divider"></div>
             <!-- Modal 
@@ -400,19 +394,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       <br>
                     </div>
                   </div>
-                  <div class="row lh-lg lh-lg">
-                    <br>
-                    <div class="col-md-4"> Cloud Platform : <br>
-                    </div>
-                    <div class="col-md-4">
-                      <span>Azure Quantum</span>
-                      <br>
-                    </div>
-                    <div class="col-md-4">
-                      <i class="fa fa-check-circle text-success"></i>
-                      <br>
-                    </div>
-                  </div>
+
                   <div class="row lh-lg lh-lg">
                     <br>
                     <div class="col-md-4"> Backend : <br>
@@ -465,20 +447,8 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       <br>
                     </div>
                   </div>
-                  <div class="row ">
-                    <br>
-                    <div class="col-md-4"> No. of samples: <br>
-                    </div>
-                    <div class="col-md-4">
-                      <span>{{accuracy}}  </span>
-                      <br>
-                    </div>
-                    <div class="col-md-4">
-                      <i class="fa fa-check-circle text-success"></i>
-                      <br>
-                    </div>
-                  </div>
-                  <div class="row lh-lg lh-lg">
+                 
+                  <div class="row lh-lg ">
                     <br>
                     <div class="col-md-4"> Entanglement: <br>
                     </div>
@@ -491,7 +461,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       <br>
                     </div>
                   </div>
-                  <div class="row lh-lg lh-lg">
+                  <div class="row lh-lg ">
                     <br>
                     <div class="col-md-4"> Optimizer type: <br>
                     </div>
@@ -513,9 +483,9 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       <span>{{ f_no }}</span>
                       <br>
                     </div>
-                    <div class="col-md-4 lh-lg">
+                    <div class="col-md-4 lh-lg lh-lg">
                       <i class="fa fa-check-circle text-success"></i>
-                      <br>
+                      <br><br>
                     </div>
                   </div>
                 </div>
@@ -533,7 +503,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 			
 				
 			   <div class="spinner-border spinner-border-custom  text-primary id="firstSpinner"  "role="status">
-					<span class="sr-only">Loading...</span>
+					<!--<span class="sr-only">Loading...</span>-->
 				</div>
 				</div>
 					<!--<h6 class="lh-lg text-center"> Training Complete.....Thank you </h6>-->
@@ -561,15 +531,18 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 				</div>
 			</div>
 			</div>
-			 <br><br>  <br>  <br> <br>  
+			 <br><br>  <br>  <div class="card-body">
+				</div>
+				
+				
 			  {% else %}
-                <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph">
+                <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="initialising training...please wait" >
 				
 			  {% endif %}   
                 
 				
 				
-				<div class="card-body lh-lg">
+				<div class="card-body">
 				</div>
               </div>
             </div>
@@ -589,41 +562,53 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
       
        
           <br>
-          <div class=" row row-cols-1 row-cols-sm-2 g-3">
 		  
-		   <div class="col" id="colBlock" style="display: none;">
-              <div class="card shadow-sm lh-lg">
-                <br>
-                <div class="card-body lh-lg"">
+		  <div class="col" id="colBlock" style="display: none;">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <img id="ccmatrix" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='cc_matrix.jpg') }}">
+        </div>
+        <div class="col">
+          <img id="qcmatrix" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='qc_matrix.jpg') }}">
+        </div>
+      </div>
+	  
+	  <div class="card shadow-sm">
+	  <img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
+	   </div>
+	  
+    </div>
+  </div>
+</div>
+          <div class=" row row-cols-1 row-cols-sm-2 g-3" >
+		 
+		   <!--<div class="col" id="colBlock"   style="display: none;">
+              <div class="card shadow-sm">
+                
+                 <br>
+		  
 							
-							<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" alt="Objective function graph">
-					          <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"></i> 
-							 
-                </div>
+							
+					        
+					
               </div>
             </div>
 			
-           <!-- <div class="col">
+           <!--  <div class="col">
               <div class="card shadow-sm">
-                <img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='histogram.jpg') }}" alt="Objective function graph">
+                
                 <div class="card-body">
-                  <div class="d-inline">
-				  
-                  <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"></i>
-					
-					
-					<br>
-					<button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="The plot_histogram function in Qiskit is used to visualize the measurement results obtained from a quantum circuit execution. The x-axis represents the possible measurement outcomes and the y-axis represents the frequency of each outcome.This visualization helps you understand the probability distribution of the measurement results obtained from your quantum circuit execution.the values 1, 2, 3, 4 along the x-axis of the histogram correspond to the measurement outcomes or bit strings obtained from the quantum circuit.For example, if you have a quantum circuit with two qubits, the measurement outcomes can be 00, 01, 10, or 11, which correspond to the decimal numbers 0, 1, 2, and 3 respectively">Confusion Matrix</button>
-                  </div>
+                  
                 </div>
               </div>
-            </div>-->
+            </div>
            
-          </div>
+         <!-- </div>-->
 		  
 		  <!--  <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>-->
-          <br>
-		  
+         
           <br>
 		     <div id="progress-container" style="display: none;">
             <div class="progress">
@@ -645,7 +630,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 	
 	
 	{%endif%}
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
@@ -690,90 +675,30 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 	
 	
 	  <script>
-      function barChart() {
+      function barChart(id,url) {
         $.ajax({
-          url: '/get_barchart',
+          url: url,
           method: 'GET',
           success: function(response) {
             var barSrc = response.bar_src;
-            $('#bchart').attr('src', barSrc);
+            //$('#ccmatrix').attr('src', barSrc);
+			$('#' + id).attr('src', barSrc);
           },
           complete: function() {
-            setTimeout(barChart, 3000); // Update the graph every 3 seconds
+            setTimeout(barChart(id, url), 3000); 
           }
         });
       }
       $(document).ready(function() {
-        barChart();
+        barChart('bchart','/get_barchart');
+		barChart('ccmatrix', '/get_cc_matrix');
+		barChart('qcmatrix', '/get_qc_matrix');
       });
     </script>
 	
 	
 	
-    <!--
-	<script>
-  function updateProgress(progress) {
-  // Update the progress bar width and aria-valuenow attribute
-  const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = progress * 100 + '%';
-  progressBar.setAttribute('aria-valuenow', progress * 100);
-
-  // Update the status message
-  const statusMessage = document.getElementById('status-message');
-  statusMessage.innerText = 'Progress: ' + Math.round(progress * 100) + '%';
-
-  // Hide the progress bar and button if the progress is 100%
-  if (progress === 1.0) {
-    progressBar.classList.add('progress-bar-striped', 'progress-bar-animated');
-    document.getElementById('start-button').style.display = 'none';
-    progressBar.style.display = 'none';
-  }
-}
-
-  function startQuantumJob() {
-    // Make the progress bar visible
-    document.getElementById('progress-bar').style.display = 'block';
-
-    // Start the quantum job
-    $.getJSON('/quantum_job', function(data) {
-      if (data.result === 'success') {
-        // Job started successfully
-        updateProgress(0); // Reset the progress bar
-        checkQuantumJob(); // Start checking the job progress
-      } else if (data.result === 'training_in_progress') {
-        // Job already in progress, update the progress bar accordingly
-        updateProgress(data.progress);
-        checkQuantumJob(); // Continue checking the job progress
-      } else {
-        // Job not started or encountered an error
-        console.log('Job not started or error occurred.');
-      }
-    });
-  }
-
-  function checkQuantumJob() {
-    $.getJSON('/quantum_job', function(data) {
-      if (data.result === 'success') {
-        // Job completed successfully
-        updateProgress(data.progress);
-        console.log('Job completed:', data.data);
-      } else if (data.result === 'training_in_progress') {
-        // Job still in progress
-        updateProgress(data.progress);
-        setTimeout(checkQuantumJob, 1000); // Check again after 1 second
-      } else {
-        // Training not started or encountered an error
-        console.log('Training not started or error occurred.');
-      }
-    });
-  }
-
-  $(document).ready(function() {
-    // Attach click event handler to the Start button
-    $('#start-button').click(startQuantumJob);
-  });
-</script>
--->
+    
     <script>
 	
       function updateProgress(progress) {
@@ -933,7 +858,14 @@ numb.textContent = counter + "%";
   }
 </script>
 
-
+<script>
+  // Initialize the popover
+  $(function () {
+    $('[data-toggle="popover"]').popover({
+      html: true, // Enable HTML content
+    });
+  });
+</script>
 
 
 
