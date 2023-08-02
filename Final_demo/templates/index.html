@@ -214,30 +214,35 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       <h6 class="my-0 fw-normal">Initial Parameters</h6>
                     </div>
                     <div class="card-body align-items-left ">
+                      <label for="modelSelect">Model:</label><br>
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="model" id="modelSelect" required>
-                        <option selected="">Models</option>
+						<option selected="">Select Model</option> 
                         <option value="VQC/MLP">VQC/MLP</option>
                         <option value="QSVM/SVM">QSVM/SVM</option>
                         <option value="QSVC/SVC">QSVC/SVC</option>
                         <option value="VQC/LR">VQC/LR</option>
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="dataset" required>
-                        <option selected="">Datasets</option>
+                      <label for="dataset">Dataset:</label><br>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="dataset" id="dataset" required>
+                        <option selected="">Select Dataset</option>
                         <option value="iris">Iris</option>
 						<option value="wine">Wine</option>
                         
 						
                       </select>
                       <br>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="split" required>
-                        <option selected="">Train_Test_split Values</option>
+                      <label for="split">Train-Test Split:</label><br>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="split" id="split" required>
+                        <option selected="">Select Split ratio</option>
                         <option value="80/20">80/20</option>
                         <option value="70/30">70/30</option>
                       </select>
                       <br>
-                      <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="Select PCA of 2 for training less than 3 minutes. "></i> <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca" required>
-                        <option selected="">PCA Values</option>
+                      <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="Select PCA of 2 for training less than 3 minutes. "></i> 
+					   <label for="pca">PCA:</label><br>
+					  <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca" id="pca" required>
+                        <option selected="">Select PCA value</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -245,16 +250,18 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       </select>
                       <br>
 					  <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="ZFeatureMap -> less complex (faster training) <br> <br> ZZ & PauliFeatureMap-> complex (slow training)  " data-content="This is some additional information.<br>You can add more content here."></i>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="featuremap" required>
-                        <option selected="">Feature Map</option>
+                      <label for="featuremap">Feature Map:</label><br>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="featuremap" id="featuremap" required>
+                        <option selected="">Select Feature Map</option>
                         <option value="z">ZFeatureMap</option>
                         <option value="zz">ZZFeatureMap</option>
                         <option value="pauli">PauliFeatureMap</option>
                       </select>
                       <br>
 					  <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="Select 'Linear' for faster training"></i>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" >
-                        <option selected="">Entanglements</option>
+                      <label for="entang">Entanglement:</label><br>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" id="entang">
+                        <option selected="">Select Entanglement type</option>
                         <option value="full">Full</option>
                         <option value="linear">Linear</option>
                       </select>
@@ -297,10 +304,9 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 					
 					</div>
 					</div>
+					<button type="submit" type="button" class="btn btn-primary">
+					<i class="fas fa-cog"></i> Initialise Model </button>
 					</div>
-		  
-		  
-		  
 		  
 		  
             </div>
@@ -312,8 +318,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           <br>
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h4>Exploring Quantum Machine Learning</h4>
-                <button type="submit" type="button" class="btn btn-primary">
-              <i class="fas fa-cog"></i> Initialise Model </button>
+                
           </div>
          </form>
 		  
@@ -321,13 +326,14 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
             <div class="col">
               <div class="card shadow-sm">
                 <img class="img-fluid rounded mx-auto d-block" src="data:image/png;base64,{{ fmap }}" alt="Circuit">
-                <div class="card-body">
-                  <div class="d-inline">
-           
+				<div class="row" style="padding:20px">
+                <div class="col-md-1" style="width:5%"> 
+				   <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="A feature map serves as a bridge between classical and quantum data representations, allowing quantum computers to operate on classical data effectively and leverage the unique capabilities of quantum computation to enhance machine learning tasks. <br><br> It maps classical data points to a quantum state or quantum circuit.  This transformation allows quantum algorithms to process and analyze complex data patterns that may not be easily separable in the classical feature "></i> 	
+				</div>
+				 <div class="col-md-10" style="font-size: 20px;font-weight:bold">
+           					Feature Map Circuit 
                   </div>
-				   <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="A feature map serves as a bridge between classical and quantum data representations, allowing quantum computers to operate on classical data effectively and leverage the unique capabilities of quantum computation to enhance machine learning tasks. <br><br> It maps classical data points to a quantum state or quantum circuit.  This transformation allows quantum algorithms to process and analyze complex data patterns that may not be easily separable in the classical feature "></i> 
-                </div>
-				 
+				 </div>
               </div>
 			 
             </div>
@@ -337,14 +343,14 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
             <div class="col">
               <div class="card shadow-sm lh-lg">
                 <img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ ans }}" alt="Circuit">
-                <br>
-                <div class="card-body">
-				 <div class="d-inline">
-           
-                  </div>
+				 <div class="row" style="padding:20px">
+                <div class="col-md-1" style="width:5%"> 
 				<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="In simpler terms, an ansatz circuit is a special kind of instruction set used in quantum computing. It is designed to create an approximate quantum state that helps solve problems faster. The circuit has adjustable knobs (parameters) that can be tweaked to get a better result. By playing with these knobs, quantum computers can find answers to complex problems more efficiently. It's like a tool that quantum computers use to make educated guesses and get closer to the correct answer step by step."></i>
                 </div>
-				 
+				 <div class="col-md-10" style="font-size: 20px;font-weight:bold">
+           					Ansatz Circuit 
+                 </div>
+				 </div> 
               </div>
             </div>
 			 <div class="b-example-divider"></div>
