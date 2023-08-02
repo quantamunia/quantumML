@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'quntamania'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_84F68795403B40E5B7F0B8D9F91093E4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7CDFD035701348D4B62D57211BA115CF }}
