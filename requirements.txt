@@ -87,7 +87,6 @@ parso==0.8.3
 pbr==5.11.1
 pickleshare==0.7.5
 Pillow==9.5.0
-Pint==0.22
 pipreqs==0.4.13
 platformdirs==3.5.1
 ply==3.11
