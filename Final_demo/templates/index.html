@@ -499,7 +499,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
             </div>
             <div class="col lh-lg ">
 			
-              <div class="card shadow-sm lh-lg d-flex justify-content-center align-items-center lh-lg">
+              <div class="card shadow-sm lh-lg d-flex justify-content-center align-items-center lh-lg" style="padding-top:10px">
 			 
 			  {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM'   %}
 			  <br> <br>  <br>  <br>  
@@ -543,7 +543,9 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 				
 			  {% else %}
                 <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="initialising training...please wait" >
-				
+				<div style="width:500px"> 
+				<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="Hello"></i>
+                </div>
 			  {% endif %}   
                 
 				
