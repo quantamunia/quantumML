@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'Quantam'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DC8650857F744B9C90F981BD56F719E9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_93A6EFC72B164AE488C036A4646B05E0 }}
