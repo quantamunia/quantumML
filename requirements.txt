@@ -159,7 +159,6 @@ tornado==6.3.2
 tqdm==4.65.0
 traitlets==5.9.0
 Twisted==22.10.0
-twisted-iocpsupport==1.0.3
 typing_extensions==4.5.0
 tzdata==2023.3
 urllib3==1.26.16
