@@ -145,7 +145,7 @@
 	</style>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid bg-light.bg-gradient">
       <div class="row">
         <div class="col-md-3">
           <!-- Sidebar with input elements -->
@@ -209,7 +209,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               <!-- <h5 class="card-title">Dashboard</h5>-->
               <form method="POST" action="/" onsubmit="return validateForm()"> 
                 <div class="col">
-                  <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card mb-4 rounded-3 shadow p-3 mb-5 bg-body rounded">
                     <div class="card-header py-2">
                       <h6 class="my-0 fw-normal">Initial Parameters</h6>
                     </div>
@@ -257,7 +257,12 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="pauli">PauliFeatureMap</option>
                       </select>
                       <br>
+<<<<<<< Updated upstream
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" >
+=======
+					  <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="Select 'Linear' for faster training"></i>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" required>
+>>>>>>> Stashed changes
                         <option selected="">Entanglements</option>
                         <option value="full">Full</option>
                         <option value="linear">LInear</option>
@@ -268,13 +273,13 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                   </div>
                 </div>
             
-              <div class="col" id="optimizerSection" style="display: block;">
+              <div class="col shadow  bg-body rounded" id="optimizerSection" style="display: block;">
                 <div class="card mb-4 rounded-3 shadow-sm ">
                   <div class="card-header py-2 ">
                     <h6 class="my-0 fw-normal">Optimizers</h6>
                   </div>
                   <div class="card-body">
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="optimizer">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="optimizer" id="validationCustom04" required>
                       <option selected="">optimizer type</option>
                       <option value="adam">Adam</option>
                       <option value="cobyla">Cobyla</option>
@@ -286,24 +291,13 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
-              <!-- Add more input elements here -->
-          
-		   <div class="col ">
-                <div class="card mb-4 rounded-3 shadow-sm ">
-                  <div class="card-header py-2 ">
-                    <h6 class="my-0 fw-normal">Tips </h6>
-                  </div>
-                  <div class="card-body">
-                   <p class="fst-italic fs-6 text">  For a faster demo, choose: <br><br>
-				   - lower PCA values <br>
-				   - linear entanglement <br>
-				   - Cobyla optmiser
-					
-					</div>
-					</div>
-					</div>
+              
 		  
-		  
+		  <div class="d-flex justify-content-between align-items-center mb-3">
+            
+                <button type="submit" type="button" class="btn btn-primary">
+              <i class="fas fa-cog"></i> Initialise Model </button>
+          </div>
 		  
 		  
 		  
@@ -316,13 +310,13 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           <br>
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h4>Exploring Quantum Machine Learning</h4>
-                <button type="submit" type="button" class="btn btn-primary">
-              <i class="fas fa-cog"></i> Initialise Model </button>
+                
           </div>
          </form>
 		  
 		   {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM' or mod == 'VQC/MLP' or mod =='VQC/LR' %}
             <div class="col">
+<<<<<<< Updated upstream
               <div class="card shadow-sm">
                 <img class="img-fluid rounded mx-auto d-block" src="data:image/png;base64,{{ fmap }}" alt="Circuit">
                 <div class="card-body">
@@ -330,17 +324,41 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
            
                   </div>
                 </div>
+=======
+              <div class="card shadow p-3 mb-5 bg-body rounded ">
+                <img class="img-fluid  rounded mx-auto d-block"  src="data:image/png;base64,{{ fmap }}" alt="Circuit">
+               
+                  Feature Map
+				   <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="A feature map serves as a bridge between classical and quantum data representations, allowing quantum computers to operate on classical data effectively and leverage the unique capabilities of quantum computation to enhance machine learning tasks. <br><br> It maps classical data points to a quantum state or quantum circuit.  This transformation allows quantum algorithms to process and analyze complex data patterns that may not be easily separable in the classical feature "></i> 
+               
+				 
+>>>>>>> Stashed changes
               </div>
             </div>
+<<<<<<< Updated upstream
 			<br>
+=======
+			
+			
+>>>>>>> Stashed changes
 			{% if mod == 'VQC/MLP' or mod == 'VQC/LR'   %}
             <div class="col">
-              <div class="card shadow-sm lh-lg">
+              <div class="card shadow p-3 mb-5 bg-body rounded ">
                 <img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ ans }}" alt="Circuit">
+<<<<<<< Updated upstream
                 <br>
                 <div class="card-body lh-lg"">
 				
                 </div>
+=======
+                
+                
+				 
+				  Ansatz
+				<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="In simpler terms, an ansatz circuit is a special kind of instruction set used in quantum computing. It is designed to create an approximate quantum state that helps solve problems faster. The circuit has adjustable knobs (parameters) that can be tweaked to get a better result. By playing with these knobs, quantum computers can find answers to complex problems more efficiently. It's like a tool that quantum computers use to make educated guesses and get closer to the correct answer step by step."></i>
+                
+				 
+>>>>>>> Stashed changes
               </div>
             </div>
 			 <div class="b-example-divider"></div>
@@ -373,13 +391,13 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               </div>
             </div>-->
             <div class="col">
-              <div class="card shadow-sm ">
+              <div class="card shadow-lg p-3 mb-5 bg-body rounded ">
                 <div class="card-body lh-lg lh-lg ">
                   <div class="row lh-lg ">
 				   <h4>Model : {{ mod }}</h4>
-				   <br><br>
+				   <br>
 				    
-                    <div class="col-md-4 lh-lg lh-lg"> Quantum Library: <br>
+                    <div class="col-md-4 lh-lg lh-lg"> Library: <br>
                     </div>
                     <div class="col-md-4">
                       <span>IBM Qiskit</span>
@@ -408,7 +426,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                     <div class="col-md-4"> Backend : <br>
                     </div>
                     <div class="col-md-4">
-                      <span>ionq.simulator</span>
+                      <span>qasm simulator</span>
                       <br>
                     </div>
                     <div class="col-md-4">
@@ -431,7 +449,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                   </div>
                   <div class="row lh-lg lh-lg">
                     <br>
-                    <div class="col-md-4"> Name of dataset: <br>
+                    <div class="col-md-4"> dataset: <br>
                     </div>
                     <div class="col-md-4">
                       <span>{{ dname }}</span>
@@ -508,12 +526,14 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       <br>
                     </div>
                   </div>
+				  <div class="card-body">
+				</div>
                 </div>
               </div>
             </div>
             <div class="col lh-lg ">
 			
-              <div class="card shadow-sm lh-lg d-flex justify-content-center align-items-center lh-lg">
+              <div class="card shadow p-3 mb-5 bg-body rounded lh-lg d-flex justify-content-center align-items-center">
 			 
 			  {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM'   %}
 			  <br> <br>  <br>  <br>  
@@ -551,16 +571,37 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 				</div>
 			</div>
 			</div>
+<<<<<<< Updated upstream
 			 <br><br>  <br>  <br> <br>  
 			  {% else %}
                 <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph">
+=======
+			 <br> 
+			  {% else %}
+			  <!--<div class="card-body shadow p-3 mb-5 bg-body rounded">
+				</div>-->
+				 <h4>  Training Graph </h4>
+
+			 		      
+							<img id="graph" class="img-fluid rounded mx-aunto d-block " src="{{ url_for('static', filename='graph.jpg') }}" alt="initialising training...please wait"  onerror="src='{{ url_for('static', filename='images/process.gif') }}'" >
+		
+		   <!--onerror="src='{{ url_for('static', filename='images/process.jpg') }}'-->
+		
+		
+
+>>>>>>> Stashed changes
 				
 			  {% endif %}   
                 
 				
 				
+<<<<<<< Updated upstream
 				<div class="card-body lh-lg">
 				</div>
+=======
+				<!--<div class="card-body">
+				</div>-->
+>>>>>>> Stashed changes
               </div>
             </div>
 			
@@ -578,6 +619,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         
       
        
+<<<<<<< Updated upstream
           <br>
           <div class=" row row-cols-1 row-cols-sm-2 g-3">
 		  
@@ -585,6 +627,86 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               <div class="card shadow-sm lh-lg">
                 <br>
                 <div class="card-body lh-lg"">
+=======
+          
+		  
+		  <div class="card  shadow p-3 mb-5 bg-body rounded" id="colBlock" style="display: none;">
+  <!--<div class="card shadow">
+    <div class="card-body">-->
+      <div class="row ">
+        <div class="col">
+          <img id="ccmatrix" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='cc_matrix.jpg') }}">
+        </div>
+        <div class="col">
+          <img id="qcmatrix" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='qc_matrix.jpg') }}">
+        </div>
+      <!--</div>-->
+	  
+	 
+	  
+    <!--</div>-->
+  </div>
+</div>
+<!--
+ <div class="card shadow p-3 mb-5 bg-body rounded">
+	  <img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
+	   </div>-->
+	   
+	   
+	<div class=" row row-cols-1 row-cols-sm-2 g-3" >
+	   
+	   <div class="col">
+              <div class="card shadow-lg p-3 mb-5 bg-body rounded ">
+                <div class="card-body lh-lg lh-lg ">
+					<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
+
+				</div>
+			</div>
+		</div>	
+
+
+        <div class="col">
+              <div class="card shadow-lg p-3 mb-5 bg-body rounded ">
+                <div class="card-body lh-lg lh-lg ">
+				
+				<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
+				
+				<button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>-->
+         
+          <br>
+		     <div id="progress-container" style="display: none;">
+            <div class="progress">
+              <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p id="status-message"></p>
+            <div id="loading-spinner" class="spinner-border" role="status" style="display: none;">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+					<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
+
+				</div>
+			</div>
+		</div>			
+	   
+	</div>
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+          <div class=" row row-cols-1 row-cols-sm-2 g-3" >
+		 
+		   <!--<div class="col" id="colBlock"   style="display: none;">
+              <div class="card shadow-sm">
+                
+                 <br>
+		  
+>>>>>>> Stashed changes
 							
 							<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" alt="Objective function graph">
 					        <button type=" button" class="btn btn-outline-primary data-bs-toggle=" tooltip" data-bs-placement="top" title="">Evaluation Metrics</button>
@@ -619,14 +741,18 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
             </div>
           </div>
         </div>
+		
+		
+		
       </div>
     </div>
     </div>
 	
 	{%else %}
-	Select parameters  and run the the application.  The code is available via <a href="#" >API</a> for testing<br><br><br>
-	<img class="splash-image" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Quantum_Machine_Learning.jpg" alt="Quantum Machine Learning">
-	
+		Select parameters  and run the application.  The code is available on  <a href="https://github.com/quantamunia/quantumML" >Github</a> for testing
+<br><BR>
+
+	<img class="splash-image img-thumbnail" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Quantum_Machine_Learning.jpg" alt="Quantum Machine Learning">
 	
 	{%endif%}
 	
@@ -793,7 +919,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 if (progressData.result === 'training_in_progress') {
                   // Job still in progress
                   updateProgress(progressData.progress);
-                  setTimeout(checkProgress, 1000); // Check again after 1 second
+                  setTimeout(checkProgress, 6000); // Check again after 1 second
                 } else {
                   // Job completed or encountered an error
                   if (progressData.result === 'success') {
@@ -887,30 +1013,70 @@ numb.textContent = counter + "%";
   });
 </script>
 
-<script>
-  function validateForm() {
-    const modelSelect = document.getElementById('modelSelect');
-    const datasetSelect = document.getElementsByName('dataset')[0];
-    const featureMapSelect = document.getElementsByName('featuremap')[0];
-    const entangSelect = document.getElementsByName('entang')[0];
-    const splitSelect = document.getElementsByName('split')[0];
-    const pcaSelect = document.getElementsByName('pca')[0];
-    const optimizerSelect = document.getElementsByName('optimizer')[0];
 
-    if (
-      modelSelect.value === '' ||
-      datasetSelect.value === '' ||
-      featureMapSelect.value === '' ||
-      entangSelect.value === '' ||
-      splitSelect.value === '' ||
-      pcaSelect.value === '' ||
-      optimizerSelect.value === ''
-    ) {
-      alert('Please select all required fields.');
-      return false; // Prevent form submission if required fields are not selected
+
+
+
+
+
+<script>
+    function validateForm() {
+        var modelSelect = document.getElementByName("model");
+        var datasetSelect = document.getElementsByName("dataset");
+        var splitSelect = document.getElementsByName("split");
+        var pcaSelect = document.getElementsByName("pca");
+        var featuremapSelect = document.getElementsByName("featuremap");
+        var entangSelect = document.getElementsByName("entang");
+        var optimizerSelect = document.getElementsByName("optimizer");
+
+        if (modelSelect.value === "") {
+            alert("Please select a model.");
+            return false;
+        }
+
+        if (datasetSelect.value === "") {
+            alert("Please select a dataset.");
+            return false;
+        }
+
+        if (splitSelect.value === "") {
+            alert("Please select a train-test split value.");
+            return false;
+        }
+
+        if (pcaSelect.value === "") {
+            alert("Please select a PCA value.");
+            return false;
+        }
+
+        if (featuremapSelect.value === "") {
+            alert("Please select a feature map.");
+            return false;
+        }
+
+        if (entangSelect.value === "") {
+            alert("Please select an entanglement type.");
+            return false;
+        }
+
+        if (optimizerSelect.value === "") {
+            alert("Please select an optimizer.");
+            return false;
+        }
+
+        return true;
     }
-  }
 </script>
+
+
+
+
+
+
+
+
+
+
 
 
 
