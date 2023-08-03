@@ -257,12 +257,12 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="pauli">PauliFeatureMap</option>
                       </select>
                       <br>
-<<<<<<< Updated upstream
+
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" >
-=======
+
 					  <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="Select 'Linear' for faster training"></i>
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" required>
->>>>>>> Stashed changes
+
                         <option selected="">Entanglements</option>
                         <option value="full">Full</option>
                         <option value="linear">LInear</option>
@@ -316,7 +316,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 		  
 		   {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM' or mod == 'VQC/MLP' or mod =='VQC/LR' %}
             <div class="col">
-<<<<<<< Updated upstream
+
               <div class="card shadow-sm">
                 <img class="img-fluid rounded mx-auto d-block" src="data:image/png;base64,{{ fmap }}" alt="Circuit">
                 <div class="card-body">
@@ -324,7 +324,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
            
                   </div>
                 </div>
-=======
+
               <div class="card shadow p-3 mb-5 bg-body rounded ">
                 <img class="img-fluid  rounded mx-auto d-block"  src="data:image/png;base64,{{ fmap }}" alt="Circuit">
                
@@ -332,25 +332,22 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 				   <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="A feature map serves as a bridge between classical and quantum data representations, allowing quantum computers to operate on classical data effectively and leverage the unique capabilities of quantum computation to enhance machine learning tasks. <br><br> It maps classical data points to a quantum state or quantum circuit.  This transformation allows quantum algorithms to process and analyze complex data patterns that may not be easily separable in the classical feature "></i> 
                
 				 
->>>>>>> Stashed changes
+
               </div>
             </div>
-<<<<<<< Updated upstream
+
 			<br>
-=======
-			
-			
->>>>>>> Stashed changes
+
 			{% if mod == 'VQC/MLP' or mod == 'VQC/LR'   %}
             <div class="col">
               <div class="card shadow p-3 mb-5 bg-body rounded ">
                 <img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ ans }}" alt="Circuit">
-<<<<<<< Updated upstream
+
                 <br>
                 <div class="card-body lh-lg"">
 				
                 </div>
-=======
+
                 
                 
 				 
@@ -358,7 +355,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 				<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="In simpler terms, an ansatz circuit is a special kind of instruction set used in quantum computing. It is designed to create an approximate quantum state that helps solve problems faster. The circuit has adjustable knobs (parameters) that can be tweaked to get a better result. By playing with these knobs, quantum computers can find answers to complex problems more efficiently. It's like a tool that quantum computers use to make educated guesses and get closer to the correct answer step by step."></i>
                 
 				 
->>>>>>> Stashed changes
+
               </div>
             </div>
 			 <div class="b-example-divider"></div>
@@ -571,13 +568,13 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 				</div>
 			</div>
 			</div>
-<<<<<<< Updated upstream
+
 			 <br><br>  <br>  <br> <br>  
 			  {% else %}
                 <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph">
-=======
+
 			 <br> 
-			  {% else %}
+			
 			  <!--<div class="card-body shadow p-3 mb-5 bg-body rounded">
 				</div>-->
 				 <h4>  Training Graph </h4>
@@ -595,13 +592,13 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 
 				
 				
-<<<<<<< Updated upstream
+
 				<div class="card-body lh-lg">
 				</div>
-=======
+
 				<!--<div class="card-body">
 				</div>-->
->>>>>>> Stashed changes
+
               </div>
             </div>
 			
@@ -619,7 +616,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         
       
        
-<<<<<<< Updated upstream
+
           <br>
           <div class=" row row-cols-1 row-cols-sm-2 g-3">
 		  
@@ -627,7 +624,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               <div class="card shadow-sm lh-lg">
                 <br>
                 <div class="card-body lh-lg"">
-=======
+
           
 		  
 		  <div class="card  shadow p-3 mb-5 bg-body rounded" id="colBlock" style="display: none;">
@@ -706,7 +703,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 
                  <br>
 		  
->>>>>>> Stashed changes
+
 							
 							<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" alt="Objective function graph">
 					        <button type=" button" class="btn btn-outline-primary data-bs-toggle=" tooltip" data-bs-placement="top" title="">Evaluation Metrics</button>
