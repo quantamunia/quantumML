@@ -242,12 +242,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
+                       
                       </select>
                       <br>
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="featuremap" required>
@@ -258,10 +253,11 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       </select>
                       <br>
 
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" >
+                      
 
 					  <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="Select 'Linear' for faster training"></i>
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" required>
+                     
+					 <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" required>
 
                         <option selected="">Entanglements</option>
                         <option value="full">Full</option>
@@ -317,13 +313,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 		   {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM' or mod == 'VQC/MLP' or mod =='VQC/LR' %}
             <div class="col">
 
-              <div class="card shadow-sm">
-                <img class="img-fluid rounded mx-auto d-block" src="data:image/png;base64,{{ fmap }}" alt="Circuit">
-                <div class="card-body">
-                  <div class="d-inline">
-           
-                  </div>
-                </div>
+              
 
               <div class="card shadow p-3 mb-5 bg-body rounded ">
                 <img class="img-fluid  rounded mx-auto d-block"  src="data:image/png;base64,{{ fmap }}" alt="Circuit">
@@ -344,7 +334,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 <img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ ans }}" alt="Circuit">
 
                 <br>
-                <div class="card-body lh-lg"">
+                <div class="card-body lh-lg">
 				
                 </div>
 
@@ -405,19 +395,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       <br>
                     </div>
                   </div>
-                  <div class="row lh-lg lh-lg">
-                    <br>
-                    <div class="col-md-4"> Cloud Platform : <br>
-                    </div>
-                    <div class="col-md-4">
-                      <span>Azure Quantum</span>
-                      <br>
-                    </div>
-                    <div class="col-md-4">
-                      <i class="fa fa-check-circle text-success"></i>
-                      <br>
-                    </div>
-                  </div>
+              
                   <div class="row lh-lg lh-lg">
                     <br>
                     <div class="col-md-4"> Backend : <br>
@@ -470,19 +448,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                       <br>
                     </div>
                   </div>
-                  <div class="row ">
-                    <br>
-                    <div class="col-md-4"> No. of samples: <br>
-                    </div>
-                    <div class="col-md-4">
-                      <span>{{accuracy}}  </span>
-                      <br>
-                    </div>
-                    <div class="col-md-4">
-                      <i class="fa fa-check-circle text-success"></i>
-                      <br>
-                    </div>
-                  </div>
+               
                   <div class="row lh-lg lh-lg">
                     <br>
                     <div class="col-md-4"> Entanglement: <br>
@@ -528,7 +494,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
-            <div class="col lh-lg ">
+            <div class="col lh-lg lh-lg">
 			
               <div class="card shadow p-3 mb-5 bg-body rounded lh-lg d-flex justify-content-center align-items-center">
 			 
@@ -571,33 +537,32 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 
 			 <br><br>  <br>  <br> <br>  
 			  {% else %}
-                <img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph">
+                
 
-			 <br> 
+			
 			
 			  <!--<div class="card-body shadow p-3 mb-5 bg-body rounded">
 				</div>-->
 				 <h4>  Training Graph </h4>
 
-			 		      
+			 		      	<div class="card-body">
+				
 							<img id="graph" class="img-fluid rounded mx-aunto d-block " src="{{ url_for('static', filename='graph.jpg') }}" alt="initialising training...please wait"  onerror="src='{{ url_for('static', filename='images/process.gif') }}'" >
 		
-		   <!--onerror="src='{{ url_for('static', filename='images/process.jpg') }}'-->
-		
+		   
+		</div>
 		
 
->>>>>>> Stashed changes
+
 				
 			  {% endif %}   
                 
 				
 				
 
-				<div class="card-body lh-lg">
-				</div>
+			
 
-				<!--<div class="card-body">
-				</div>-->
+			
 
               </div>
             </div>
@@ -617,44 +582,44 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
       
        
 
-          <br>
-          <div class=" row row-cols-1 row-cols-sm-2 g-3">
-		  
+         
+          <!--<div class=" row row-cols-1 row-cols-sm-2 g-3">
+		  <!--
 		   <div class="col" id="colBlock" style="display: none;">
               <div class="card shadow-sm lh-lg">
                 <br>
-                <div class="card-body lh-lg"">
+                <div class="card-body lh-lg"">-->
 
           
 		  
-		  <div class="card  shadow p-3 mb-5 bg-body rounded" id="colBlock" style="display: none;">
-  <!--<div class="card shadow">
-    <div class="card-body">-->
-      <div class="row ">
+<div class="col" id="colBlock" style="display: none;">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <div class="row">
         <div class="col">
           <img id="ccmatrix" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='cc_matrix.jpg') }}">
         </div>
         <div class="col">
           <img id="qcmatrix" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='qc_matrix.jpg') }}">
         </div>
-      <!--</div>-->
+      </div>
 	  
 	 
 	  
-    <!--</div>-->
+    </div>
   </div>
 </div>
 <!--
  <div class="card shadow p-3 mb-5 bg-body rounded">
 	  <img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
 	   </div>-->
-	   
-	   
-	<div class=" row row-cols-1 row-cols-sm-2 g-3" >
-	   
+	   <!--row row-cols-1 row-cols-sm-2 g-3" -->
+	   <br>
+	<div class="col"  id="colBlock1" style="display: none;">
+	   <div class="row">
 	   <div class="col">
-              <div class="card shadow-lg p-3 mb-5 bg-body rounded ">
-                <div class="card-body lh-lg lh-lg ">
+              <div class="card shadow p-3 mb-5 bg-body rounded ">
+                <div class="card-body">
 					<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
 
 				</div>
@@ -663,28 +628,56 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 
 
         <div class="col">
-              <div class="card shadow-lg p-3 mb-5 bg-body rounded ">
-                <div class="card-body lh-lg lh-lg ">
+              <div class="card shadow p-3 mb-5 bg-body rounded ">
+                
 				
-				<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
 				
-				<button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>-->
+				
+				<button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
          
-          <br>
-		     <div id="progress-container" style="display: none;">
-            <div class="progress">
-              <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <p id="status-message"></p>
-            <div id="loading-spinner" class="spinner-border" role="status" style="display: none;">
-              <span class="sr-only">Loading...</span>
-            </div>
+        
+           
+            
+		    <div id="progress-container" style="display: none;">
+			   
+                
+                <div class="card-body" >
+				<img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='histogram.jpg') }}" onerror="src='{{ url_for('static', filename='images/cloud.gif') }}'" >
+                 
+                </div>
+              
+            
+			<!--<div class="progress">
+              <div id="progrefss-bar"   class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>-->
+            	
+			
+			
+			
+            <!--<p id="status-message"></p>
+			
+				  
+			<!--class="spinner-border" role="status"-->
+			<!--
+            <div id="loading-spinner"  style="display: none;">
+			
+                 <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/cloud.gif') }}" >
+
+              <!--<span class="sr-only">Loading...</span>
+			  
+            </div>-->
           </div>
-					<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
+		  
+		 
+				
+			
+				
+				
+				
 
 				</div>
-			</div>
-		</div>			
+			
+		</div>	
+</div>		
 	   
 	</div>
 	   
@@ -696,9 +689,9 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 	   
 	   
 	   
-          <div class=" row row-cols-1 row-cols-sm-2 g-3" >
+         <!-- <div class=" row row-cols-1 row-cols-sm-2 g-3" >
 		 
-		   <!--<div class="col" id="colBlock"   style="display: none;">
+		   <div class="col" id="colBlock"   style="display: none;">
               <div class="card shadow-sm">
                 
                  <br>
@@ -709,22 +702,14 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 					        <button type=" button" class="btn btn-outline-primary data-bs-toggle=" tooltip" data-bs-placement="top" title="">Evaluation Metrics</button>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='histogram.jpg') }}" alt="Objective function graph">
-                <div class="card-body">
-                  <div class="d-inline">
-				  
-                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="The plot_histogram function in Qiskit is used to visualize the measurement results obtained from a quantum circuit execution. The x-axis represents the possible measurement outcomes and the y-axis represents the frequency of each outcome.This visualization helps you understand the probability distribution of the measurement results obtained from your quantum circuit execution.the values 1, 2, 3, 4 along the x-axis of the histogram correspond to the measurement outcomes or bit strings obtained from the quantum circuit.For example, if you have a quantum circuit with two qubits, the measurement outcomes can be 00, 01, 10, or 11, which correspond to the decimal numbers 0, 1, 2, and 3 respectively">Confusion Matrix</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </div>-->
+			
+			
+          
            
           </div>
 		  
-		    <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
+		  <!--  <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
           <br>
 		  
           <br>
@@ -739,7 +724,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           </div>
         </div>
 		
-		
+		-->
 		
       </div>
     </div>
@@ -749,14 +734,14 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 		Select parameters  and run the application.  The code is available on  <a href="https://github.com/quantamunia/quantumML" >Github</a> for testing
 <br><BR>
 
-	<img class="splash-image img-thumbnail" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Quantum_Machine_Learning.jpg" alt="Quantum Machine Learning">
+	<img class="splash-image img-thumbnail img-fluid rounded mx-auto d-block" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Quantum_Machine_Learning.jpg" alt="Quantum Machine Learning">
 	
 	{%endif%}
-	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
-    <script>
+        <script>
       function updateGraph() {
         $.ajax({
           url: '/get_graph_data',
@@ -773,7 +758,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
       $(document).ready(function() {
         updateGraph();
         updateHist();
-		barChart();
+		//barChart();
       });
     </script>
     <script>
@@ -786,7 +771,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
             $('#histogram').attr('src', histSrc);
           },
           complete: function() {
-            setTimeout(updateHist, 4000); // Update the graph every 3 seconds
+            setTimeout(updateHist, 2500); // Update the graph every 3 seconds
           }
         });
       }
@@ -797,90 +782,30 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 	
 	
 	  <script>
-      function barChart() {
+      function barChart(id,url) {
         $.ajax({
-          url: '/get_barchart',
+          url: url,
           method: 'GET',
           success: function(response) {
             var barSrc = response.bar_src;
-            $('#bchart').attr('src', barSrc);
+            //$('#ccmatrix').attr('src', barSrc);
+			$('#' + id).attr('src', barSrc);
           },
           complete: function() {
-            setTimeout(barChart, 3000); // Update the graph every 3 seconds
+            setTimeout(barChart(id, url), 2000); 
           }
         });
       }
       $(document).ready(function() {
-        barChart();
+        barChart('bchart','/get_barchart');
+		barChart('ccmatrix', '/get_cc_matrix');
+		barChart('qcmatrix', '/get_qc_matrix');
       });
     </script>
 	
 	
 	
-    <!--
-	<script>
-  function updateProgress(progress) {
-  // Update the progress bar width and aria-valuenow attribute
-  const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = progress * 100 + '%';
-  progressBar.setAttribute('aria-valuenow', progress * 100);
-
-  // Update the status message
-  const statusMessage = document.getElementById('status-message');
-  statusMessage.innerText = 'Progress: ' + Math.round(progress * 100) + '%';
-
-  // Hide the progress bar and button if the progress is 100%
-  if (progress === 1.0) {
-    progressBar.classList.add('progress-bar-striped', 'progress-bar-animated');
-    document.getElementById('start-button').style.display = 'none';
-    progressBar.style.display = 'none';
-  }
-}
-
-  function startQuantumJob() {
-    // Make the progress bar visible
-    document.getElementById('progress-bar').style.display = 'block';
-
-    // Start the quantum job
-    $.getJSON('/quantum_job', function(data) {
-      if (data.result === 'success') {
-        // Job started successfully
-        updateProgress(0); // Reset the progress bar
-        checkQuantumJob(); // Start checking the job progress
-      } else if (data.result === 'training_in_progress') {
-        // Job already in progress, update the progress bar accordingly
-        updateProgress(data.progress);
-        checkQuantumJob(); // Continue checking the job progress
-      } else {
-        // Job not started or encountered an error
-        console.log('Job not started or error occurred.');
-      }
-    });
-  }
-
-  function checkQuantumJob() {
-    $.getJSON('/quantum_job', function(data) {
-      if (data.result === 'success') {
-        // Job completed successfully
-        updateProgress(data.progress);
-        console.log('Job completed:', data.data);
-      } else if (data.result === 'training_in_progress') {
-        // Job still in progress
-        updateProgress(data.progress);
-        setTimeout(checkQuantumJob, 1000); // Check again after 1 second
-      } else {
-        // Training not started or encountered an error
-        console.log('Training not started or error occurred.');
-      }
-    });
-  }
-
-  $(document).ready(function() {
-    // Attach click event handler to the Start button
-    $('#start-button').click(startQuantumJob);
-  });
-</script>
--->
+    
     <script>
 	
       function updateProgress(progress) {
@@ -891,23 +816,26 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         statusMessage.innerText = 'Progress: ' + progress + '%';
         if (progress === 100) {
           progressBar.classList.remove('progress-bar-animated');
+		  document.getElementById('progress-container').style.display = 'none';
+		  
         }
       }
       document.getElementById('start-button').addEventListener('click', function() {
         // Show the progress container
         document.getElementById('progress-container').style.display = 'block';
         // Show the loading spinner
-        document.getElementById('loading-spinner').style.display = 'block';
+        //document.getElementById('loading-spinner').style.display = 'block';
         // Reset the progress bar
-        updateProgress(0);
+        //updateProgress(0);
         // Perform the quantum job
         $.getJSON('/quantum_job', function(data) {
           // Hide the loading spinner and hide button
           document.getElementById('start-button').style.display = 'none';
-          document.getElementById('loading-spinner').style.display = 'none';
+          //document.getElementById('loading-spinner').style.display = 'none';
           if (data.result === 'success') {
             // Job completed successfully
             updateProgress(100);
+			
             console.log('Job completed:', data.data);
           } else if (data.result === 'training_in_progress') {
             // Update progress asynchronously
@@ -916,7 +844,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 if (progressData.result === 'training_in_progress') {
                   // Job still in progress
                   updateProgress(progressData.progress);
-                  setTimeout(checkProgress, 6000); // Check again after 1 second
+                  setTimeout(checkProgress, 1500); // Check again after 1 second
                 } else {
                   // Job completed or encountered an error
                   if (progressData.result === 'success') {
@@ -952,7 +880,9 @@ numb.textContent = counter + "%";
 	function handleSpinnerValue() {
             const colBlock = document.getElementById('colBlock');
 			 colBlock.style.display = "block";
-
+			 
+			 const colBlock1 = document.getElementById('colBlock1');
+			 colBlock1.style.display = "block";
             
         }
 	
@@ -979,7 +909,12 @@ numb.textContent = counter + "%";
                     showSecondSpinner(); // Show the second spinner on successful classification
 					setTimeout(handleSpinnerValue, 8000);
 					
-                } else if (spinnerValue === "training") {
+                } else if (spinnerValue === "completed"){
+				   
+				   setTimeout(handleSpinnerValue, 3000);
+				
+				
+				} else if (spinnerValue === "training") {
                     console.log("Classification is still in progress. Display a message or handle accordingly.");
 					setTimeout(q_spinner, 2000);
                 } else {
@@ -1010,64 +945,39 @@ numb.textContent = counter + "%";
   });
 </script>
 
-
-
-
-
-
-
 <script>
-    function validateForm() {
-        var modelSelect = document.getElementByName("model");
-        var datasetSelect = document.getElementsByName("dataset");
-        var splitSelect = document.getElementsByName("split");
-        var pcaSelect = document.getElementsByName("pca");
-        var featuremapSelect = document.getElementsByName("featuremap");
-        var entangSelect = document.getElementsByName("entang");
-        var optimizerSelect = document.getElementsByName("optimizer");
+  function validateForm() {
+    const modelSelect = document.getElementById('modelSelect');
+    const datasetSelect = document.getElementsByName('dataset')[0];
+    const featureMapSelect = document.getElementsByName('featuremap')[0];
+    const entangSelect = document.getElementsByName('entang')[0];
+    const splitSelect = document.getElementsByName('split')[0];
+    const pcaSelect = document.getElementsByName('pca')[0];
+    const optimizerSelect = document.getElementsByName('optimizer')[0];
 
-        if (modelSelect.value === "") {
-            alert("Please select a model.");
-            return false;
-        }
-
-        if (datasetSelect.value === "") {
-            alert("Please select a dataset.");
-            return false;
-        }
-
-        if (splitSelect.value === "") {
-            alert("Please select a train-test split value.");
-            return false;
-        }
-
-        if (pcaSelect.value === "") {
-            alert("Please select a PCA value.");
-            return false;
-        }
-
-        if (featuremapSelect.value === "") {
-            alert("Please select a feature map.");
-            return false;
-        }
-
-        if (entangSelect.value === "") {
-            alert("Please select an entanglement type.");
-            return false;
-        }
-
-        if (optimizerSelect.value === "") {
-            alert("Please select an optimizer.");
-            return false;
-        }
-
-        return true;
+    if (
+      modelSelect.value === '' ||
+      datasetSelect.value === '' ||
+      featureMapSelect.value === '' ||
+      entangSelect.value === '' ||
+      splitSelect.value === '' ||
+      pcaSelect.value === '' ||
+      optimizerSelect.value === ''
+    ) {
+      alert('Please select all required fields.');
+      return false; // Prevent form submission if required fields are not selected
     }
+  }
 </script>
 
-
-
-
+<script>
+  // Initialize the popover
+  $(function () {
+    $('[data-toggle="popover"]').popover({
+      html: true, // Enable HTML content
+    });
+  });
+</script>
 
 
 
