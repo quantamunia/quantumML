@@ -166,12 +166,12 @@
 		  
             <div class="card-body">
 			
-					  <!-- Button trigger modal 
+					   
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 </button>
 
-<!-- Modal 
+ 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -181,16 +181,20 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 		
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-	 
-	 
-	 
-	 
-
+	  
+	  <div class="modal-body">
+	      <h3 class="modal-title fs-5" id="exampleModalLabel">About this Project</h3><br>
+		<p>In this project, the aim is to explore the potential of quantum computers for
+simple machine learning tasks. A key focus should be on comparing the per-
+formance of classical machine learning algorithms with available approaches to
+quantum machine learning. The goal is to devise ways to benchmark quantum
+machine learning models and to understand how they compare to classical algo-
+rithms in terms of cost, performance, speed, interpretability, and reproducibility.</p>
+	  </div>
 	  
 	  
 	  
-	  
+      <div class="modal-body">	  
 	  
 	  
 	      <h3 class="modal-title fs-5" id="exampleModalLabel">Feature Map Circuit</h3><br>
@@ -213,7 +217,8 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
       </div>
     </div>
   </div>
-</div>-->
+</div>
+<br><br>
 
          
               <!-- <h5 class="card-title">Dashboard</h5>-->
@@ -321,13 +326,15 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 			
 			
 			
-			
-			
-			<div class='col'>
-			
-			
-	<!-- Button to open the first modal -->
-    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+			<div class="card" style="width: 18rem;">
+  
+  <img class="img-fluid rounded mx-auto d-block card-img-top" src="{{ url_for('static', filename='images/cogwheel.jpg') }}" >
+  <div class="card-body">
+   
+    
+  
+  <!-- Button to open the first modal -->
+    <a class="btn btn-success" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Explore Trained Models</a>
 
     <!-- The first modal -->
     <div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
@@ -338,11 +345,26 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Content for QSVC/SVC section goes here.
+				<h6>ZZ Feature Map</h6>
+					<h6>Full - Entanglement </h6><br>
+					<h6>Feature Circuit</h6>
+                    <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvc/feature.png') }}" >
+                    <br><br>
+				
+				<h6>Confusion Matrix Classical</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvc/cc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Confusion Matrix Quantum</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvc/qc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Barchart</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvc/barchart.jpg') }}" >
+				<br><br>
+				
                 </div>
                 <div class="modal-footer">
                     <!-- Button to open the second modal -->
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Next</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">QSVM/SVM</button>
                 </div>
             </div>
         </div>
@@ -353,17 +375,33 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">QSVM/SVM</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">QSVM/SVM - Iris dataset [Full features]</h1>
+					
+				
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Content for QSVM/SVM section goes here.
+				<h6>ZZ Feature Map</h6>
+					<h6>Full - Entanglement </h6><br>
+					<h6>Feature Circuit</h6>
+                   <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvm/feature.png') }}" >
+                    <br><br>
+				
+				<h6>Confusion Matrix Classical</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvm/cc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Confusion Matrix Quantum</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvm/qc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Barchart</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvm/barchart.jpg') }}" >
+				<br><br>
+				
                 </div>
                 <div class="modal-footer">
                     <!-- Button to open the third modal -->
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Next</button>
-                    <!-- Button to go back to the first modal -->
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">VQC/MLP</button>
+                   
                 </div>
             </div>
         </div>
@@ -374,17 +412,36 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">VQC/MLP</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">VQC/MLP - Iris dataset [Full features]</h1>
+					
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Content for VQC/MLP section goes here.
+				<h6>ZZ Feature Map</h6>
+					<h6>Full - Entanglement </h6>
+					<h6>COBYLA - Optimiser</h6><br>
+				<h6>Feature Circuit</h6>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/mlp/feature.png') }}" >
+                    <br><br>
+				<h6>Ansatz Circuit</h6><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc//mlp/ans.jpg') }}" >
+				    <br><br>
+				<h6>Confusion Matrix Classical</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/mlp/cc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Confusion Matrix Quantum</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/mlp/qc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Barchart</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/mlp/barchart.jpg') }}" >
+				<br><br>
+				<h6>Histogram </h6><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/mlp/histogram.jpg') }}" >
                 </div>
                 <div class="modal-footer">
                     <!-- Button to open the fourth modal -->
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Next</button>
-                    <!-- Button to go back to the second modal -->
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Back</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">VQC/LR</button>
+                    
                 </div>
             </div>
         </div>
@@ -395,40 +452,89 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel4">VQC/LR</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel4">VQC/LR - Iris dataset [Full features]</h1>
+					
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Content for VQC/LR section goes here.
+				<h6>ZZ Feature Map</h6>
+					<h6>Full - Entanglement </h6>
+					<h6>COBYLA - Optimiser</h6>
+					<br>
+                    <h6>Feature Circuit</h6>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/feature.png') }}" >
+                    <br><br>
+				<h6>Ansatz Circuit</h6><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/ans.jpg') }}" >
+				    <br><br>
+				<h6>Confusion Matrix Classical</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/cc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Confusion Matrix Quantum</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/qc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Barchart</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/barchart.jpg') }}" >
+				<br><br>
+				<h6>Histogram </h6><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/histogram.jpg') }}" >
                 </div>
                 <div class="modal-footer">
-                    <!-- Button to open the fifth modal -->
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">Next</button>
+                    
                     <!-- Button to go back to the third modal -->
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Back</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">QSVC/SVC</button>
                 </div>
             </div>
         </div>
     </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<div class='col'>
+			
+			
+	
 
-    <!-- The fifth modal -->
-    <div class="modal fade" id="exampleModalToggle5" tabindex="-1" aria-labelledby="exampleModalToggleLabel5" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel5">QNN/NN</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Content for QNN/NN section goes here.
-                </div>
-                <div class="modal-footer">
-                    <!-- Button to go back to the fourth modal -->
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Back</button>
-                </div>
-            </div>
-        </div>
-    </div>
+ 
 			  
 			</div>  
 			  
@@ -447,6 +553,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           <br>
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h4>Exploring Quantum Machine Learning</h4>
+			<img class="img-fluid  rounded mx-auto d-block"  src="https://www.ucd.ie/t4media/crest-ucd.svg" alt="Circuit"> 
                 
           </div>
          
@@ -769,7 +876,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 			</div>
 		</div>	
 
-
+{% if mod == 'VQC/MLP' or mod == 'VQC/LR'   %}
         <div class="col">
               <div class="card shadow p-3 mb-5 bg-body rounded ">
                 
@@ -790,24 +897,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 </div>
               
             
-			<!--<div class="progress">
-              <div id="progrefss-bar"   class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>-->
-            	
 			
-			
-			
-            <!--<p id="status-message"></p>
-			
-				  
-			<!--class="spinner-border" role="status"-->
-			<!--
-            <div id="loading-spinner"  style="display: none;">
-			
-                 <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/cloud.gif') }}" >
-
-              <!--<span class="sr-only">Loading...</span>
-			  
-            </div>-->
           </div>
 		  
 		 
@@ -820,6 +910,8 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 				</div>
 			
 		</div>	
+		
+		{% endif   %}
 </div>		
 	   
 	</div>
