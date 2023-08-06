@@ -295,10 +295,104 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
               <i class="fas fa-cog"></i> Initialise Model </button>
           </div>
 		  
-		  
+		  </form>
 		  
             </div>
-          </div>
+			</div>
+			
+			<br>
+			
+			
+		
+			
+			<br>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				<div class="col">
+                  <div class="card mb-4 rounded-3 shadow p-3 mb-5 bg-body rounded">
+                    <div class="card-header py-2">
+					
+					 </div>
+					 
+					 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">QSVC/SVC</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Show a second modal and hide this one with the button below.
+		<img class="img-fluid rounded mx-aunto d-block " src="{{ url_for('static', filename='images/qiskit.png') }}">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Explore QSVM/SVM</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">QSVM/SVM</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Hide this modal and show the first with the button below.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Explore QNN/NN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">QNN/NN</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Hide this modal and show the first with the button below.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to QSVM/SVM</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<a class="btn  btn-success" data-bs-toggle="modal" href="#exampleModalToggle" role="button">EXplore Trained Models</a>
+					 
+					 
+        </div>
+			  </div>
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			
+			
+          
         </div>
         <div class="col-md-9">
           <!-- Main content area 
@@ -308,7 +402,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
             <h4>Exploring Quantum Machine Learning</h4>
                 
           </div>
-         </form>
+         
 		  
 		   {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM' or mod == 'VQC/MLP' or mod =='VQC/LR' %}
             <div class="col">
@@ -590,7 +684,6 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                 <br>
                 <div class="card-body lh-lg"">-->
 
-          
 		  
 <div class="col" id="colBlock" style="display: none;">
   <div class="card shadow-sm">
@@ -617,6 +710,9 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 	   <br>
 	<div class="col"  id="colBlock1" style="display: none;">
 	   <div class="row">
+	   
+	   
+	   
 	   <div class="col">
               <div class="card shadow p-3 mb-5 bg-body rounded ">
                 <div class="card-body">
@@ -638,7 +734,7 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         
            
             
-		    <div id="progress-container" style="display: none;">
+		    <div id="progress-container" style="display: block;">
 			   
                 
                 <div class="card-body" >
@@ -708,6 +804,23 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
           
            
           </div>
+		  <br>
+		  
+		 <div class="col" >
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <div class="row">
+         <div id="metrics-container">
+        <!-- Metrics will be displayed here -->
+    </div>
+          
+      </div>
+	  
+	 
+	  
+    </div>
+  </div>
+</div>
 		  
 		  <!--  <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
           <br>
@@ -806,28 +919,44 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
 	
 	
     
-    <script>
+   <script>
+   
+   function updateMetricsDisplay(metrics) {
+            var metricsContainer = document.getElementById('metrics-container');
+            metricsContainer.innerHTML = '';
+
+            // Display each metric in the container
+            for (var key in metrics) {
+                if (metrics.hasOwnProperty(key)) {
+                    var metricValue = metrics[key];
+                    var metricElement = document.createElement('p');
+                    metricElement.innerHTML = key + ': ' + metricValue;
+                    metricsContainer.appendChild(metricElement);
+                }
+            }
+        }
 	
       function updateProgress(progress) {
-        const progressBar = document.getElementById('progress-bar');
-        progressBar.style.width = progress + '%';
-        progressBar.setAttribute('aria-valuenow', progress);
-        const statusMessage = document.getElementById('status-message');
-        statusMessage.innerText = 'Progress: ' + progress + '%';
+        //const progressBar = document.getElementById('progress-bar');
+        //progressBar.style.width = progress + '%';
+        //progressBar.setAttribute('aria-valuenow', progress);
+        //const statusMessage = document.getElementById('status-message');
+        //statusMessage.innerText = 'Progress: ' + progress + '%';
         if (progress === 100) {
-          progressBar.classList.remove('progress-bar-animated');
+          //progressBar.classList.remove('progress-bar-animated');
 		  document.getElementById('progress-container').style.display = 'none';
-		  
+		  document.getElementById('start-button').style.display = 'none';
         }
       }
       document.getElementById('start-button').addEventListener('click', function() {
         // Show the progress container
-        document.getElementById('progress-container').style.display = 'block';
+        //document.getElementById('progress-container').style.display = 'block';
         // Show the loading spinner
         //document.getElementById('loading-spinner').style.display = 'block';
         // Reset the progress bar
         //updateProgress(0);
         // Perform the quantum job
+		document.getElementById('start-button').style.display = 'none';
         $.getJSON('/quantum_job', function(data) {
           // Hide the loading spinner and hide button
           document.getElementById('start-button').style.display = 'none';
@@ -849,8 +978,14 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
                   // Job completed or encountered an error
                   if (progressData.result === 'success') {
                     updateProgress(100);
+					// Access the metrics from the JSON response using progressData.metrics
+                                var metrics = progressData.metrics;
+
+                                // Display the metrics on the HTML page
+                                updateMetricsDisplay(metrics);
                     console.log('Job completed:', progressData.data);
-                  } else {
+                  } 
+				  else {
                     console.log('Training not started or error occurred.');
                   }
                 }
@@ -863,6 +998,11 @@ Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         });
       });
     </script>
+	
+	
+	
+	
+	
 		 <script type='text/javascript'>
 			const numb = document.querySelector(".numb");
 			let counter = 1;
