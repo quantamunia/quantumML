@@ -1,0 +1,1396 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qunatamnia Welcome </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>-->
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+	
+	
+	
+	
+	 	
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<style>
+        /* Custom CSS to make the spinner big */
+        .spinner-border-custom {
+            width: 5.5rem; /* Adjust the size as needed */
+            height: 5.5rem; /* Adjust the size as needed */
+            border-width: 0.6em; /* Adjust the thickness of the spinner lines */
+        }
+		
+		.circular {
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+.circular .inner,
+.circular .outer,
+.circular .circle {
+    position: absolute;
+    z-index: 6;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.circular .inner {
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+    background-color: #dde6f0;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.circular .circle {
+    z-index: 1;
+    box-shadow: none;
+}
+
+.circular .numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: 500;
+    color: #007bff;
+}
+
+.circular .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+}
+
+.circle .bar .progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+}
+
+.circle .bar .progress,
+.dot span {
+    background: #007bff;
+}
+
+.circle .left .progress {
+    z-index: 1;
+    animation: left 4s linear both;
+}
+
+@keyframes left {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.circle .right {
+    z-index: 3;
+    transform: rotate(180deg);
+}
+
+.circle .right .progress {
+    animation: right 4s linear both;
+    animation-delay: 4s;
+}
+
+@keyframes right {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.circle .dot {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 10px;
+    margin-top: -5px;
+    animation: dot 8s linear both;
+    transform-origin: 0% 50%;
+}
+
+.circle .dot span {
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+@keyframes dot {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+        z-index: 4;
+    }
+
+    100% {
+        transform: rotate(270deg);
+        z-index: 4;
+    }
+}
+	</style>
+  </head>
+  <body>
+    <div class="container-fluid bg-light.bg-gradient">
+      <div class="row">
+        <div class="col-md-3">
+          <!-- Sidebar with input elements -->
+		  
+		  
+          <div class="card">
+		  
+		  
+            <div class="card-body">
+			
+					   
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+About  
+</button>
+
+ 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+    
+	
+		
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+	  
+	  <div class="modal-body">
+	      <h3 class="modal-title fs-5" id="exampleModalLabel">About this Project</h3><br>
+		<p>In this project, the aim is to explore the potential of quantum computers for
+simple machine learning tasks. A key focus should be on comparing the per-
+formance of classical machine learning algorithms with available approaches to
+quantum machine learning. The goal is to devise ways to benchmark quantum
+machine learning models and to understand how they compare to classical algo-
+rithms in terms of cost, performance, speed, interpretability, and reproducibility.</p>
+	  </div>
+	  
+	  
+	  
+      <div class="modal-body">	  
+	  
+	  
+	      <h3 class="modal-title fs-5" id="exampleModalLabel">Feature Map Circuit</h3><br>
+        <p>is a quantum circuit or transformation that encodes classical data into a quantum state. It takes classical input data, such as numerical features or patterns, and maps them to a quantum state representation."</p>
+      </div>
+	  
+	  
+	  <div class="modal-body">
+	      <h3 class="modal-title fs-5" id="exampleModalLabel">Ansatz Circuit</h3><br>
+		<p> The term 'ansatz' originates from the German word meaning 'assumption' or 'initial guess.' In quantum computing, an ansatz circuit is constructed by combining a set of quantum gates and operations, where certain parameters are left unspecified"</p>
+	  </div>
+	  
+	  <div class="modal-body">
+	      <h3 class="modal-title fs-5" id="exampleModalLabel">PCA</h3><br>
+		<p>PCA is often used as a preprocessing step in machine learning and data analysis to reduce the dimensionality of high-dimensional datasets. By reducing the number of variables, PCA can simplify the data representation, remove noise, and improve computational efficiency.</p>
+	  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+         
+              <!-- <h5 class="card-title">Dashboard</h5>-->
+              <form method="POST" action="/"  onsubmit="return validateForm()" > 
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow p-3 mb-5 bg-body rounded">
+                    <div class="card-header py-2">
+                      <h6 class="my-0 fw-normal">Initial Parameters</h6>
+                    </div>
+                    <div class="card-body align-items-left ">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="model" id="modelSelect" required>
+                        <option selected="">Models</option>
+                        <option value="VQC/MLP">VQC/MLP</option>
+                        <option value="QSVM/SVM">QSVM/SVM</option>
+                        <option value="QSVC/SVC">QSVC/SVC</option>
+                        <option value="VQC/LR">VQC/LR</option>
+                      </select>
+                      <br>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="dataset" required>
+                        <option selected="">Datasets</option>
+                        <option value="iris">Iris</option>
+						<option value="wine">Wine</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="cancer">Breast Cancer</option>
+						
+                      </select>
+                      <br>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="split" required>
+                        <option selected="">Train_Test_split Values</option>
+                        <option value="80/20">80/20</option>
+                        <option value="70/30">70/30</option>
+                      </select>
+                      <br>
+					    <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-bs-toggle="tooltip" title="Select PCA of 2 for faster model"></i>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca" required>
+                        <option selected="">PCA Values</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                       
+                      </select>
+                      <br>
+					    <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-bs-toggle="tooltip" title="Select Zfeaturemap for a faster model"></i>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="featuremap" required>
+                        <option selected="">Feature Map</option>
+                        <option value="z">ZFeatureMap</option>
+                        <option value="zz">ZZFeatureMap</option>
+                        <option value="pauli">PauliFeatureMap</option>
+                      </select>
+                      <br>
+
+                      
+
+					  
+                    <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-bs-toggle="tooltip" title="Entanglement are gates that link qubits. Full (complex), Linear(simple).  Choose Linear for a simple and faster model"></i>
+					 <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" required>
+
+                        <option selected="">Entanglements</option>
+                        <option value="full">Full</option>
+                        <option value="linear">LInear</option>
+                      </select>
+                      <br>
+					  
+                    </div>
+                  </div>
+                </div>
+            
+              <div class="col shadow  bg-body rounded" id="optimizerSection" style="display: block;">
+                <div class="card mb-4 rounded-3 shadow-sm ">
+                  <div class="card-header py-2 ">
+                    <h6 class="my-0 fw-normal">Optimizers</h6>
+                  </div>
+                  <div class="card-body">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="optimizer" id="validationCustom04" required>
+                      <option selected="">optimizer type</option>
+                      <option value="adam">Adam</option>
+                      <option value="cobyla">Cobyla</option>
+                      <option value="spsa">Spsa</option>
+                    </select>
+                   
+                    <br>
+                 
+                  </div>
+                </div>
+              </div>
+              
+		  
+		  <div class="d-flex justify-content-between align-items-center mb-3">
+            
+                <button type="submit"  class="btn btn-primary">
+              <i class="fas fa-cog"></i> Initialise Model </button>
+          </div>
+		  
+		  </form>
+		  
+            </div>
+			</div>
+			
+			<br>
+			
+			
+		
+			
+			<br>
+			
+			
+			
+			
+			
+			<div class="card">
+  
+  <div class="card-body">
+   
+    <h5 class="card-title">Trained Models</h5>
+    <p class="card-text">Visualise various metrics & circuits derived from trained quantum  models such as  QSVC, QSVM, VQC,QNN, etc</p>
+  
+  <!-- Button to open the first modal -->
+    <a class="btn btn-success" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Explore Trained Models</a>
+
+    <!-- The first modal -->
+    <div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">QSVC/SVC</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+				<h6>ZZ Feature Map</h6>
+					<h6>Full - Entanglement </h6><br>
+					<h6>Feature Circuit</h6>
+                    <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvc/feature.png') }}" >
+                    <br><br>
+				
+				<h6>Confusion Matrix Classical</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvc/cc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Confusion Matrix Quantum</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvc/qc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Barchart</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvc/barchart.jpg') }}" >
+				<br><br>
+				
+                </div>
+                <div class="modal-footer">
+                    <!-- Button to open the second modal -->
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">QSVM/SVM</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The second modal -->
+    <div class="modal fade" id="exampleModalToggle2" tabindex="-1" aria-labelledby="exampleModalToggleLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">QSVM/SVM - Iris dataset [Full features]</h1>
+					
+				
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+				<h6>ZZ Feature Map</h6>
+					<h6>Full - Entanglement </h6><br>
+					<h6>Feature Circuit</h6>
+                   <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvm/feature.png') }}" >
+                    <br><br>
+				
+				<h6>Confusion Matrix Classical</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvm/cc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Confusion Matrix Quantum</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvm/qc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Barchart</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qsvm/barchart.jpg') }}" >
+				<br><br>
+				
+                </div>
+                <div class="modal-footer">
+                    <!-- Button to open the third modal -->
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">VQC/MLP</button>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The third modal -->
+    <div class="modal fade" id="exampleModalToggle3" tabindex="-1" aria-labelledby="exampleModalToggleLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">VQC/MLP - Iris dataset [Full features]</h1>
+					
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+				<h6>ZZ Feature Map</h6>
+					<h6>Full - Entanglement </h6>
+					<h6>COBYLA - Optimiser</h6><br>
+				<h6>Feature Circuit</h6>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/mlp/feature.png') }}" >
+                    <br><br>
+				<h6>Ansatz Circuit</h6><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc//mlp/ans.jpg') }}" >
+				    <br><br>
+				<h6>Confusion Matrix Classical</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/mlp/cc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Confusion Matrix Quantum</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/mlp/qc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Barchart</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/mlp/barchart.jpg') }}" >
+				<br><br>
+				<h6>Histogram </h6><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/mlp/histogram.jpg') }}" >
+                </div>
+                <div class="modal-footer">
+                    <!-- Button to open the fourth modal -->
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">VQC/LR</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The fourth modal -->
+    <div class="modal fade" id="exampleModalToggle4" tabindex="-1" aria-labelledby="exampleModalToggleLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel4">VQC/LR - Iris dataset [Full features]</h1>
+					
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+				<h6>ZZ Feature Map</h6>
+					<h6>Full - Entanglement </h6>
+					<h6>COBYLA - Optimiser</h6>
+					<br>
+                    <h6>Feature Circuit</h6>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/feature.png') }}" >
+                    <br><br>
+				<h6>Ansatz Circuit</h6><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/ans.jpg') }}" >
+				    <br><br>
+				<h6>Confusion Matrix Classical</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/cc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Confusion Matrix Quantum</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/qc_matrix.jpg') }}" >
+				<br><br>
+				<h6>Barchart</h6> <br><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/barchart.jpg') }}" >
+				<br><br>
+				<h6>Histogram </h6><br>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/vqc/lr/histogram.jpg') }}" >
+                </div>
+                <div class="modal-footer">
+                    
+                    <!-- Button to go back to the third modal -->
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">QNN/NN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+  
+  
+  <div class="modal fade" id="exampleModalToggle5" tabindex="-1" aria-labelledby="exampleModalToggleLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel5">QNN/NN - Iris dataset [Full features]</h1>
+					
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+				
+					<br>
+                    <h6>Ansatz Circuit</h6>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qnn/ansatz.jpg') }}" >
+                    <br><br>
+				
+                <div class="modal-footer">
+                    
+                    <!-- Button to go back to the third modal -->
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">QSVC/SVC</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<div class='col'>
+			
+			
+	
+
+ 
+			  
+			</div>  
+			  
+			  
+			  
+			  
+			  
+			  
+			
+			
+          
+        </div>
+        <div class="col-md-9">
+          <!-- Main content area 
+        <h3>Exploring Quantum Machine Learning</h3>-->
+          <br>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4>Exploring Quantum Machine Learning</h4>
+			<img class="img-fluid  rounded mx-auto d-block"  src="https://www.ucd.ie/t4media/crest-ucd.svg" alt="Circuit"> 
+                
+          </div>
+         
+		  
+		   {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM' or mod == 'VQC/MLP' or mod =='VQC/LR' %}
+            <div class="col">
+
+              
+
+              <div class="card shadow p-3 mb-5 bg-body rounded ">
+                <img class="img-fluid  rounded mx-auto d-block"  src="data:image/png;base64,{{ fmap }}" alt="Circuit">
+               <div class="row align-items-center">
+					
+					<div class="col-auto">
+						<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"  data-bs-toggle="tooltip"   title="A feature map serves as a bridge between classical and quantum data representations, allowing quantum computers to operate on classical data effectively and leverage the unique capabilities of quantum computation to enhance machine learning tasks. <br><br> It maps classical data points to a quantum state or quantum circuit.  This transformation allows quantum algorithms to process and analyze complex data patterns that may not be easily separable in the classical feature "></i> 
+					</div>
+					<div class="col-auto">
+						Feature Map
+					 </div>
+				</div>
+
+              </div>
+            </div>
+
+			<br>
+
+			{% if mod == 'VQC/MLP' or mod == 'VQC/LR'   %}
+            <div class="col">
+              <div class="card shadow p-3 mb-5 bg-body rounded ">
+                <img class="img-fluid rounded mx-auto d-block lh-lg" src="data:image/png;base64,{{ ans }}" alt="Circuit">
+
+                <br>
+                <div class="card-body lh-lg">
+				
+                </div>
+
+                
+                 <div class="row align-items-center">
+					
+					<div class="col-auto">
+				 
+				  
+						<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"  data-bs-toggle="tooltip" title="In simpler terms, an ansatz circuit is a special kind of instruction set used in quantum computing. It is designed to create an approximate quantum state that helps solve problems faster. The circuit has adjustable knobs (parameters) that can be tweaked to get a better result. By playing with these knobs, quantum computers can find answers to complex problems more efficiently. It's like a tool that quantum computers use to make educated guesses and get closer to the correct answer step by step."></i>
+					</div>
+				<div class="col-auto">
+				 Ansatz
+				</div>
+				</div>
+              </div>
+            </div>
+			 <div class="b-example-divider"></div>
+			 {% endif   %}
+			<div class=" row row-cols-1 row-cols-sm-2 g-3">
+            <div class="b-example-divider"></div>
+            <div class="b-example-divider"></div>
+            <!-- Modal 
+            <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="settingsModalLabel">Azure Quantum Configuration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="text" class="form-control mb-3" placeholder="Resource ID URL">
+                    <select class="form-select">
+                      <option selected="">Backends</option>
+                      <option value="option1">ionq</option>
+                      <option value="option2">quantinuum</option>
+                      <option value="option3">qasm</option>
+                    </select>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+            <div class="col">
+              <div class="card shadow-lg p-3 mb-5 bg-body rounded ">
+                <div class="card-body lh-lg lh-lg ">
+                  <div class="row lh-lg ">
+				   <h4>Model : {{ mod }}</h4>
+				   <br>
+				    
+                    <div class="col-md-4 lh-lg lh-lg"> Library: <br>
+                    </div>
+                    <div class="col-md-4">
+                      <span>IBM Qiskit</span>
+                      <br>
+                    </div>
+                    <div class="col-md-4">
+                      <i class="fa fa-check-circle text-success"></i>
+                      <br>
+                    </div>
+                  </div>
+              
+                  <div class="row lh-lg lh-lg">
+                    <br>
+                    <div class="col-md-4"> Backend : <br>
+                    </div>
+                    <div class="col-md-4">
+                      <span>qasm simulator</span>
+                      <br>
+                    </div>
+                    <div class="col-md-4">
+                      <i class="fa fa-check-circle text-success"></i>
+                      <br>
+                    </div>
+                  </div>
+                  <div class="row lh-lg lh-lg">
+                    <br>
+                    <div class="col-md-4"> dataset size : <br>
+                    </div>
+                    <div class="col-md-4">
+                      <span>150</span>
+                      <br>
+                    </div>
+                    <div class="col-md-4">
+                      <i class="fa fa-check-circle text-success"></i>
+                      <br>
+                    </div>
+                  </div>
+                  <div class="row lh-lg lh-lg">
+                    <br>
+                    <div class="col-md-4"> dataset: <br>
+                    </div>
+                    <div class="col-md-4">
+                      <span>{{ dname }}</span>
+                      <br>
+                    </div>
+                    <div class="col-md-4">
+                      <i class="fa fa-check-circle text-success"></i>
+                      <br>
+                    </div>
+                  </div>
+                  <div class="row lh-lg lh-lg">
+                    <br>
+                    <div class="col-md-4"> No.PCA values: <br>
+                    </div>
+                    <div class="col-md-4">
+                      <span>{{ pcano }}</span>
+                      <br>
+                    </div>
+                    <div class="col-md-4">
+                      <i class="fa fa-check-circle text-success"></i>
+                      <br>
+                    </div>
+                  </div>
+               
+                  <div class="row lh-lg lh-lg">
+                    <br>
+                    <div class="col-md-4"> Entanglement: <br>
+                    </div>
+                    <div class="col-md-4">
+                      <span>{{ ent }}</span>
+                      <br>
+                    </div>
+                    <div class="col-md-4">
+                      <i class="fa fa-check-circle text-success"></i>
+                      <br>
+                    </div>
+                  </div>
+                  <div class="row lh-lg lh-lg">
+                    <br>
+                    <div class="col-md-4"> Optimizer type: <br>
+                    </div>
+                    <div class="col-md-4">
+                      <span>{{ opt }}</span>
+                      <br>
+                    </div>
+                    <div class="col-md-4">
+                      <i class="fa fa-check-circle text-success"></i>
+                      <br>
+                    </div>
+                  </div>
+               
+                  <div class="row lh-lg lh-lg lh-lg ">
+                    <br>
+                    <div class="col-md-4 lh-lg"> No. of features: <br>
+                    </div>
+                    <div class="col-md-4 lh-lg">
+                      <span>{{ f_no }}</span>
+                      <br>
+                    </div>
+                    <div class="col-md-4 lh-lg">
+                      <i class="fa fa-check-circle text-success"></i>
+                      <br>
+                    </div>
+                  </div>
+				  <div class="card-body">
+				</div>
+                </div>
+              </div>
+            </div>
+            <div class="col lh-lg lh-lg">
+			
+              <div class="card shadow p-3 mb-5 bg-body rounded lh-lg d-flex justify-content-center align-items-center">
+			 
+			  {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM'   %}
+			  <br> <br>  <br>   
+			  	<h6>  Optimisation Process....... Please Wait </h6>
+					<!--<h6 class="lh-lg "> Training Model....Please wait </h6>-->
+				<div  id="first_spin"  >
+			
+				
+			   <div class="spinner-border spinner-border-custom  text-primary id="firstSpinner"  "role="status">
+					<span class="sr-only">Loading...</span>
+				</div>
+				</div>
+					<!--<h6 class="lh-lg text-center"> Training Complete.....Thank you </h6>-->
+				<div  id="second_spin" style="display: none;">
+			
+				<div class="circular">
+					<div class="inner">
+					</div>
+					<div class="outer">
+					</div>
+					<div class="numb">
+					0%</div>
+					<div class="circle">
+						<div class="dot">
+							<span></span>
+					</div>
+					<div class="bar left">
+						<div class="progress">
+						</div>
+					</div>
+					<div class="bar right">
+						<div class="progress">
+							</div>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			 <br><br>  <br>  <br> <br>  
+			  {% else %}
+                
+
+			
+			
+			  <!--<div class="card-body shadow p-3 mb-5 bg-body rounded">
+				</div>-->
+				 <h4>  Training Graph </h4>
+
+			 		      	<div class="card-body">
+				
+							<img id="graph0" class="img-fluid rounded mx-aunto d-block " src="{{ graphSrc }}" alt="initialising training...please wait"  onerror="src='{{ url_for('static', filename='images/process.gif') }}'" >
+		
+		   <!--id="graph"-->
+		</div>
+		
+
+ 
+				
+			  {% endif %}   
+                
+				
+				
+
+			
+
+			
+
+              </div>
+            </div>
+			
+          </div>
+          <!--<div class="col"><div class="card shadow-sm"><div class="card-body"><h6 class="my-0 fw-normal">..... Training in Progress</h6><img id="graph" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='graph.jpg') }}" alt="Objective function graph" ></div></div></div>
+	-->
+          
+			 
+			 
+			  
+        <!-- Display the training metrics here -->
+			
+			 
+		      
+        
+      
+       
+
+         
+          <!--<div class=" row row-cols-1 row-cols-sm-2 g-3">
+		  <!--
+		   <div class="col" id="colBlock" style="display: none;">
+              <div class="card shadow-sm lh-lg">
+                <br>
+                <div class="card-body lh-lg"">-->
+
+		  
+<div class="col" id="colBlock" style="display: none;">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <img id="ccmatrix" class="img-fluid rounded mx-auto d-block" src="{{ barSrc }}">
+        </div>
+        <div class="col">
+          <img id="qcmatrix" class="img-fluid rounded mx-auto d-block" src="{{ barSrc }}">
+        </div>
+      </div>
+	  
+	 
+	  
+    </div>
+  </div>
+</div>
+<!--
+ <div class="card shadow p-3 mb-5 bg-body rounded">
+	  <img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
+	   </div>-->
+	   <!--row row-cols-1 row-cols-sm-2 g-3" -->
+	   <br>
+	<div class="col"  id="colBlock1" style="display: none;">
+	   <div class="row">
+	   
+	   
+	   
+	   <div class="col">
+              <div class="card shadow p-3 mb-5 bg-body rounded ">
+                <div class="card-body">
+					<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ barSrc }}" >
+
+				</div>
+			</div>
+		</div>	
+
+{% if mod == 'VQC/MLP' or mod == 'VQC/LR'   %}
+        <div class="col">
+              <div class="card shadow p-3 mb-5 bg-body rounded ">
+                
+				
+				
+				
+				<button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
+         
+        
+           
+            
+		    <div id="progress-container" style="display: block;">
+			   
+                
+                <div class="card-body" >
+				<img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ histSrc }}" onerror="src='{{ url_for('static', filename='images/cloud.gif') }}'" >
+                 
+                </div>
+              
+            
+			
+          </div>
+		  
+		 
+				
+			
+				
+				
+
+				</div>
+			
+		</div>	
+		
+		
+</div>	
+
+
+
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+         <!-- <div class=" row row-cols-1 row-cols-sm-2 g-3" >
+		 
+		   <div class="col" id="colBlock"   style="display: none;">
+              <div class="card shadow-sm">
+                
+                 <br>
+		  
+
+							
+							<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" alt="Objective function graph">
+					        <button type=" button" class="btn btn-outline-primary data-bs-toggle=" tooltip" data-bs-placement="top" title="">Evaluation Metrics</button>
+                </div>
+              </div>
+            </div>-->
+			
+			
+          
+           
+          </div>
+		  <br>
+		  
+		 <div class="col" id="finalH"  style="display: none;" >
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <div class="row">
+         
+		 
+		  <!-- Metrics will be displayed here -->
+		 
+		 
+		 <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Quantum States and Probabilities
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      Each bar in the histogram corresponds to a unique quantum state (e.g., '000', '001', '010', etc.), which represents the final state of the qubits after executing the quantum circuit. The height of each bar represents the probability of obtaining that specific quantum state as an outcome of the computation. The higher the bar, the more likely that particular quantum state is to occur.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Measurement Outcomes
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      measurements collapse the quantum state to a classical state. When you run a quantum circuit multiple times, you obtain a set of measurement outcomes. Each outcome corresponds to one of the possible quantum states, and the histogram shows the frequency (probability) of each outcome.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Quantum Errors and Noise
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       In real-world quantum systems, noise and errors can affect the outcomes of quantum computations. The histogram can reveal patterns that might indicate noise in the system, such as non-uniform distributions or unexpected probabilities for certain states.
+      </div>
+    </div>
+  </div>
+</div>
+		 
+		 
+        <!-- Metrics will be displayed here -->
+    
+          
+      </div>
+	  
+	 
+	  
+    </div>
+  </div>
+</div>
+{% endif   %}
+<br><BR><BR>
+		  
+		  <!--  <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
+          <br>
+		  
+          <br>
+		     <div id="progress-container" style="display: none;">
+            <div class="progress">
+              <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p id="status-message"></p>
+            <div id="loading-spinner" class="spinner-border" role="status" style="display: none;">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+		
+		-->
+		
+      </div>
+    </div>
+    </div>
+	
+	{%else %}
+		Select parameters  and run the application.  The code is available on  <a href="https://github.com/quantamunia/quantumML" >Github</a> for testing
+<br><BR>
+
+	<img class="splash-image img-thumbnail img-fluid rounded mx-auto d-block" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Quantum_Machine_Learning.jpg" alt="Quantum Machine Learning">
+	
+	{%endif%}
+	
+
+
+  
+        <script>
+      function updateGraph() {
+        $.ajax({
+          url: '/get_graph_data',
+          method: 'GET',
+          success: function(response) {
+            var graphSrc = response.graph_src;
+			graphSrc = graphSrc.replace(/\\/g, '/');
+			console.log("graphSrc:", graphSrc);
+            $('#graph0').attr('src', graphSrc);
+			
+			
+          },
+		   error: function() {
+                   //console.log("something went wrong"); // Handle errors here, if necessary
+                },
+          complete: function() {
+		   
+            setTimeout(updateGraph, 3000); // Update the graph every 3 seconds
+          }
+        });
+      }
+      $(document).ready(function() {
+        updateGraph();
+        updateHist();
+		
+		//barChart();
+      });
+    </script>
+	
+	
+	 
+	 
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    <script>
+      function updateHist() {
+        $.ajax({
+          url: '/get_hist',
+          method: 'GET',
+          success: function(response) {
+            var histSrc = response.hist_src;
+            $('#histogram').attr('src', histSrc);
+          },
+          complete: function() {
+            setTimeout(updateHist, 2500); // Update the graph every 3 seconds
+          }
+        });
+      }
+      $(document).ready(function() {
+        updateHist();
+      });
+    </script>
+	
+	
+	  <script>
+      function barChart(id,url) {
+        $.ajax({
+          url: url,
+          method: 'GET',
+          success: function(response) {
+            var barSrc = response.bar_src;
+            //$('#ccmatrix').attr('src', barSrc);
+			$('#' + id).attr('src', barSrc);
+          },
+          complete: function() {
+            setTimeout(barChart(id, url), 2000); 
+          }
+        });
+      }
+      $(document).ready(function() {
+        barChart('bchart','/get_barchart');
+		barChart('ccmatrix', '/get_cc_matrix');
+		barChart('qcmatrix', '/get_qc_matrix');
+		
+      });
+    </script>
+	
+	
+	
+   
+   <script>
+	
+       function updateProgress(progress) {
+        //const progressBar = document.getElementById('progress-bar');
+        //progressBar.style.width = progress + '%';
+        //progressBar.setAttribute('aria-valuenow', progress);
+        //const statusMessage = document.getElementById('status-message');
+        //statusMessage.innerText = 'Progress: ' + progress + '%';
+        if (progress === 100) {
+          //progressBar.classList.remove('progress-bar-animated');
+		  //document.getElementById('progress-container').style.display = 'none';
+		  document.getElementById('start-button').style.display = 'none';
+		  
+        }
+      }
+      document.getElementById('start-button').addEventListener('click', function() {
+        // Show the progress container
+        //document.getElementById('progress-container').style.display = 'block';
+        // Show the loading spinner
+        //document.getElementById('loading-spinner').style.display = 'block';
+        // Reset the progress bar
+        //updateProgress(0);
+        // Perform the quantum job
+		document.getElementById('start-button').style.display = 'none';
+        $.getJSON('/quantum_job', function(data) {
+          // Hide the loading spinner and hide button
+          document.getElementById('start-button').style.display = 'none';
+          //document.getElementById('loading-spinner').style.display = 'none';
+          if (data.result === 'success') {
+            // Job completed successfully
+            updateProgress(100);
+			 //var metrics = data.metrics;
+
+                                // Display the metrics on the HTML page
+                               // updateMetricsDisplay(metrics);
+							   document.getElementById('finalH').style.display = 'block';
+            console.log('Job completed first:', data.data);
+          } else if (data.result === 'training_in_progress') {
+            // Update progress asynchronously
+            setTimeout(function checkProgress() {
+              $.getJSON('/quantum_job', function(progressData) {
+                if (progressData.result === 'training_in_progress') {
+                  // Job still in progress
+                  updateProgress(progressData.progress);
+                  setTimeout(checkProgress, 1500); // Check again after 1 second
+                } else {
+                  // Job completed or encountered an error
+                  if (progressData.result === 'success') {
+				   
+                    //updateProgress(100);
+					// Access the metrics from the JSON response using progressData.metrics
+                               // var metrics = progressData.metrics;
+
+                                // Display the metrics on the HTML page
+                                //updateMetricsDisplay(metrics);
+                    console.log('Job completed second:', progressData.data);
+                  } 
+				  else {
+                    console.log('Training not started or error occurred.');
+                  }
+                }
+              });
+            }, 1000);
+          } else {
+            // Training not started or encountered an error
+            console.log('Training not started or error occurred.');
+          }
+        });
+      });
+    </script>
+
+	
+	
+	
+	
+	
+		 <script type='text/javascript'>
+			const numb = document.querySelector(".numb");
+			let counter = 1;
+			setInterval(()=>{
+			if(counter == 100){
+			clearInterval();
+			}else{
+counter+=1;
+numb.textContent = counter + "%";
+}
+}, 80);</script>
+	
+	
+	
+	
+	<script type='text/javascript'>
+	
+	function handleSpinnerValue() {
+            const colBlock = document.getElementById('colBlock');
+			 colBlock.style.display = "block";
+			 
+			 const colBlock1 = document.getElementById('colBlock1');
+			 colBlock1.style.display = "block";
+            
+        }
+	
+	
+
+		
+    // Function to hide the first spinner and display the second spinner
+    function showSecondSpinner() {
+        const first_spin = document.getElementById("first_spin");
+        const second_spin = document.getElementById("second_spin");
+
+        first_spin.style.display = "none";
+        second_spin.style.display = "block";
+    }
+
+    function q_spinner() {
+        fetch('/q_spinner')
+            .then(response => response.json())
+            .then(data => {
+                // Assuming the JSON response from the server is like {"spinner": "success"} or {"spinner": "training"}
+                const spinnerValue = data.spinner;
+
+                if (spinnerValue === "success") {
+                    showSecondSpinner(); // Show the second spinner on successful classification
+					setTimeout(handleSpinnerValue, 8000);
+					
+                } else if (spinnerValue === "completed"){
+				   
+				   setTimeout(handleSpinnerValue, 3000);
+				
+				
+				} else if (spinnerValue === "training") {
+                    console.log("Classification is still in progress. Display a message or handle accordingly.");
+					setTimeout(q_spinner, 2100);
+                } else {
+                    console.log("Unknown response from the server."); // Handle unexpected response
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error); // Handle any errors during the fetch
+            });
+    }
+
+    // Call the q_spinner function to trigger the classification process
+    q_spinner();
+	
+</script>
+	
+
+	<script>
+  document.getElementById("modelSelect").addEventListener("change", function() {
+    const optimizerSection = document.getElementById("optimizerSection");
+    const selectedModel = this.value;
+
+    if (selectedModel === "QSVM/SVM" || selectedModel === "QSVC/SVC") {
+      optimizerSection.style.display = "none"; // Hide the "Optimizers" section
+    } else {
+      optimizerSection.style.display = "block"; // Show the "Optimizers" section
+    }
+  });
+</script>
+
+
+
+
+
+
+<script>
+        // Function to delete images via AJAX
+        function deleteImages() {
+            $.ajax({
+                url: '/img_kill',
+                method: 'GET',
+                success: function(data) {
+                    // Handle success response
+					//location.reload();
+                    console.log(data);
+                },
+                complete: function() {
+                    setTimeout(deleteImages, 2400); // Update the graph every 3 seconds
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            deleteImages();
+        });
+    </script>
+
+ 
+      <script>
+  function validateForm() {
+    // Get references to the form elements
+
+	var modelSelect = document.getElementsByName('model')[0];
+    var datasetSelect = document.getElementsByName('dataset')[0];
+    var splitSelect = document.getElementsByName('split')[0];
+    var pcaSelect = document.getElementsByName('pca')[0];
+    var featuremapSelect = document.getElementsByName('featuremap')[0];
+    var entangSelect = document.getElementsByName('entang')[0];
+	var optimizerSelect = document.getElementsByName('optimizer')[0];
+
+
+    // Check if all required fields are selected
+    if (
+      modelSelect.value === 'Models' ||
+      datasetSelect.value === 'Datasets' ||
+      splitSelect.value === 'Train_Test_split Values' ||
+      pcaSelect.value === 'PCA Values' ||
+      featuremapSelect.value === 'Feature Map' ||
+      entangSelect.value === 'Entanglements' 
+      //optimizerSelect.value === 'optimizer type'
+    ) {
+      // Show a custom validation message
+      alert('Please fill out all required fields.');
+      return false; // Prevent form submission
+    }
+    return true; // Form is valid, proceed with form submission
+  }
+</script>
+
+
+
+
+
+	
+	
+  </body>
+</html>
+
+
