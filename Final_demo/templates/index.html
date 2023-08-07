@@ -168,7 +168,7 @@
 			
 					   
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-Quantum-ML Terminology  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+About  
 </button>
 
  
@@ -222,7 +222,7 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 
          
               <!-- <h5 class="card-title">Dashboard</h5>-->
-              <form method="POST" action="/" onsubmit="return validateForm()"> 
+              <form method="POST" action="/"  onsubmit="return validateForm()" > 
                 <div class="col">
                   <div class="card mb-4 rounded-3 shadow p-3 mb-5 bg-body rounded">
                     <div class="card-header py-2">
@@ -252,6 +252,7 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
                         <option value="70/30">70/30</option>
                       </select>
                       <br>
+					    <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-bs-toggle="tooltip" title="Select PCA of 2 for faster model"></i>
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pca" required>
                         <option selected="">PCA Values</option>
                         <option value="2">2</option>
@@ -260,6 +261,7 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
                        
                       </select>
                       <br>
+					    <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-bs-toggle="tooltip" title="Select Zfeaturemap for a faster model"></i>
                       <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="featuremap" required>
                         <option selected="">Feature Map</option>
                         <option value="z">ZFeatureMap</option>
@@ -270,8 +272,8 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 
                       
 
-					  <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-toggle="popover" data-placement="top" title="Select 'Linear' for faster training"></i>
-                     
+					  
+                    <i class="fa fa-question-circle me-2" style="color:#0d6efd" data-bs-toggle="tooltip" title="Entanglement are gates that link qubits. Full (complex), Linear(simple).  Choose Linear for a simple and faster model"></i>
 					 <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="entang" required>
 
                         <option selected="">Entanglements</option>
@@ -306,7 +308,7 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 		  
 		  <div class="d-flex justify-content-between align-items-center mb-3">
             
-                <button type="submit" type="button" class="btn btn-primary">
+                <button type="submit"  class="btn btn-primary">
               <i class="fas fa-cog"></i> Initialise Model </button>
           </div>
 		  
@@ -326,12 +328,12 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 			
 			
 			
-			<div class="card" style="width: 18rem;">
+			<div class="card">
   
-  <img class="img-fluid rounded mx-auto d-block card-img-top" src="{{ url_for('static', filename='images/cogwheel.jpg') }}" >
   <div class="card-body">
    
-    
+    <h5 class="card-title">Trained Models</h5>
+    <p class="card-text">Visualise various metrics & circuits derived from trained quantum  models such as  QSVC, QSVM, VQC,QNN, etc</p>
   
   <!-- Button to open the first modal -->
     <a class="btn btn-success" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Explore Trained Models</a>
@@ -482,7 +484,7 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
                 <div class="modal-footer">
                     
                     <!-- Button to go back to the third modal -->
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">QSVC/SVC</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">QNN/NN</button>
                 </div>
             </div>
         </div>
@@ -491,6 +493,31 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
   
   
   
+  <div class="modal fade" id="exampleModalToggle5" tabindex="-1" aria-labelledby="exampleModalToggleLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel5">QNN/NN - Iris dataset [Full features]</h1>
+					
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+				
+					<br>
+                    <h6>Ansatz Circuit</h6>
+				<img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='images/qnn/ansatz.jpg') }}" >
+                    <br><br>
+				
+                <div class="modal-footer">
+                    
+                    <!-- Button to go back to the third modal -->
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">QSVC/SVC</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  </div>
   
   
   
@@ -565,11 +592,15 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 
               <div class="card shadow p-3 mb-5 bg-body rounded ">
                 <img class="img-fluid  rounded mx-auto d-block"  src="data:image/png;base64,{{ fmap }}" alt="Circuit">
-               
-                  Feature Map
-				   <i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="A feature map serves as a bridge between classical and quantum data representations, allowing quantum computers to operate on classical data effectively and leverage the unique capabilities of quantum computation to enhance machine learning tasks. <br><br> It maps classical data points to a quantum state or quantum circuit.  This transformation allows quantum algorithms to process and analyze complex data patterns that may not be easily separable in the classical feature "></i> 
-               
-				 
+               <div class="row align-items-center">
+					
+					<div class="col-auto">
+						<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"  data-bs-toggle="tooltip"   title="A feature map serves as a bridge between classical and quantum data representations, allowing quantum computers to operate on classical data effectively and leverage the unique capabilities of quantum computation to enhance machine learning tasks. <br><br> It maps classical data points to a quantum state or quantum circuit.  This transformation allows quantum algorithms to process and analyze complex data patterns that may not be easily separable in the classical feature "></i> 
+					</div>
+					<div class="col-auto">
+						Feature Map
+					 </div>
+				</div>
 
               </div>
             </div>
@@ -587,13 +618,17 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
                 </div>
 
                 
-                
+                 <div class="row align-items-center">
+					
+					<div class="col-auto">
 				 
-				  Ansatz
-				<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd" data-toggle="popover" data-placement="top" title="In simpler terms, an ansatz circuit is a special kind of instruction set used in quantum computing. It is designed to create an approximate quantum state that helps solve problems faster. The circuit has adjustable knobs (parameters) that can be tweaked to get a better result. By playing with these knobs, quantum computers can find answers to complex problems more efficiently. It's like a tool that quantum computers use to make educated guesses and get closer to the correct answer step by step."></i>
-                
-				 
-
+				  
+						<i class="fa fa-question-circle" style="font-size:36px;color:#0d6efd"  data-bs-toggle="tooltip" title="In simpler terms, an ansatz circuit is a special kind of instruction set used in quantum computing. It is designed to create an approximate quantum state that helps solve problems faster. The circuit has adjustable knobs (parameters) that can be tweaked to get a better result. By playing with these knobs, quantum computers can find answers to complex problems more efficiently. It's like a tool that quantum computers use to make educated guesses and get closer to the correct answer step by step."></i>
+					</div>
+				<div class="col-auto">
+				 Ansatz
+				</div>
+				</div>
               </div>
             </div>
 			 <div class="b-example-divider"></div>
@@ -747,8 +782,8 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
               <div class="card shadow p-3 mb-5 bg-body rounded lh-lg d-flex justify-content-center align-items-center">
 			 
 			  {% if mod == 'QSVC/SVC' or mod == 'QSVM/SVM'   %}
-			  <br> <br>  <br>  <br>  
-			  	
+			  <br> <br>  <br>   
+			  	<h6>  Optimisation Process....... Please Wait </h6>
 					<!--<h6 class="lh-lg "> Training Model....Please wait </h6>-->
 				<div  id="first_spin"  >
 			
@@ -795,9 +830,9 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 
 			 		      	<div class="card-body">
 				
-							<img id="graph" class="img-fluid rounded mx-aunto d-block " src="{{  url_for('static', filename='graph.jpg')  }}" alt="initialising training...please wait"  onerror="src='{{ url_for('static', filename='images/process.gif') }}'" >
+							<img id="graph0" class="img-fluid rounded mx-aunto d-block " src="{{ graphSrc }}" alt="initialising training...please wait"  onerror="src='{{ url_for('static', filename='images/process.gif') }}'" >
 		
-		   
+		   <!--id="graph"-->
 		</div>
 		
 
@@ -844,10 +879,10 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
     <div class="card-body">
       <div class="row">
         <div class="col">
-          <img id="ccmatrix" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='cc_matrix.jpg') }}">
+          <img id="ccmatrix" class="img-fluid rounded mx-auto d-block" src="{{ barSrc }}">
         </div>
         <div class="col">
-          <img id="qcmatrix" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='qc_matrix.jpg') }}">
+          <img id="qcmatrix" class="img-fluid rounded mx-auto d-block" src="{{ barSrc }}">
         </div>
       </div>
 	  
@@ -870,7 +905,7 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 	   <div class="col">
               <div class="card shadow p-3 mb-5 bg-body rounded ">
                 <div class="card-body">
-					<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='barchart.jpg') }}" >
+					<img id="bchart" class="img-fluid rounded mx-auto d-block" src="{{ barSrc }}" >
 
 				</div>
 			</div>
@@ -892,7 +927,7 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 			   
                 
                 <div class="card-body" >
-				<img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='histogram.jpg') }}" onerror="src='{{ url_for('static', filename='images/cloud.gif') }}'" >
+				<img id="histogram" class="img-fluid rounded mx-auto d-block" src="{{ histSrc }}" onerror="src='{{ url_for('static', filename='images/cloud.gif') }}'" >
                  
                 </div>
               
@@ -905,18 +940,16 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 			
 				
 				
-				
 
 				</div>
 			
 		</div>	
 		
-		{% endif   %}
-</div>		
-	   
-	</div>
-	   
-	   
+		
+</div>	
+
+
+
 	   
 	   
 	   
@@ -945,13 +978,57 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
           </div>
 		  <br>
 		  
-		 <div class="col" >
+		 <div class="col" id="finalH"  style="display: none;" >
   <div class="card shadow-sm">
     <div class="card-body">
       <div class="row">
-         <div id="metrics-container">
-        <!-- Metrics will be displayed here -->
+         
+		 
+		  <!-- Metrics will be displayed here -->
+		 
+		 
+		 <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Quantum States and Probabilities
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      Each bar in the histogram corresponds to a unique quantum state (e.g., '000', '001', '010', etc.), which represents the final state of the qubits after executing the quantum circuit. The height of each bar represents the probability of obtaining that specific quantum state as an outcome of the computation. The higher the bar, the more likely that particular quantum state is to occur.
+      </div>
     </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Measurement Outcomes
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      measurements collapse the quantum state to a classical state. When you run a quantum circuit multiple times, you obtain a set of measurement outcomes. Each outcome corresponds to one of the possible quantum states, and the histogram shows the frequency (probability) of each outcome.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Quantum Errors and Noise
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       In real-world quantum systems, noise and errors can affect the outcomes of quantum computations. The histogram can reveal patterns that might indicate noise in the system, such as non-uniform distributions or unexpected probabilities for certain states.
+      </div>
+    </div>
+  </div>
+</div>
+		 
+		 
+        <!-- Metrics will be displayed here -->
+    
           
       </div>
 	  
@@ -960,6 +1037,8 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
     </div>
   </div>
 </div>
+{% endif   %}
+<br><BR><BR>
 		  
 		  <!--  <button id="start-button" class="btn btn-primary mt-3">Deploy to Azure Quantum Workspace</button>
           <br>
@@ -992,7 +1071,7 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 	
 
 
-   
+  
         <script>
       function updateGraph() {
         $.ajax({
@@ -1000,10 +1079,18 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
           method: 'GET',
           success: function(response) {
             var graphSrc = response.graph_src;
-            $('#graph').attr('src', graphSrc);
+			graphSrc = graphSrc.replace(/\\/g, '/');
+			console.log("graphSrc:", graphSrc);
+            $('#graph0').attr('src', graphSrc);
+			
+			
           },
+		   error: function() {
+                   //console.log("something went wrong"); // Handle errors here, if necessary
+                },
           complete: function() {
-            setTimeout(updateGraph, 2000); // Update the graph every 3 seconds
+		   
+            setTimeout(updateGraph, 3000); // Update the graph every 3 seconds
           }
         });
       }
@@ -1014,6 +1101,23 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 		//barChart();
       });
     </script>
+	
+	
+	 
+	 
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     <script>
       function updateHist() {
         $.ajax({
@@ -1059,25 +1163,10 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
 	
 	
 	
-    
-   <script>
    
-   function updateMetricsDisplay(metrics) {
-            var metricsContainer = document.getElementById('metrics-container');
-            metricsContainer.innerHTML = '';
-
-            // Display each metric in the container
-            for (var key in metrics) {
-                if (metrics.hasOwnProperty(key)) {
-                    var metricValue = metrics[key];
-                    var metricElement = document.createElement('p');
-                    metricElement.innerHTML = key + ': ' + metricValue;
-                    metricsContainer.appendChild(metricElement);
-                }
-            }
-        }
+   <script>
 	
-      function updateProgress(progress) {
+       function updateProgress(progress) {
         //const progressBar = document.getElementById('progress-bar');
         //progressBar.style.width = progress + '%';
         //progressBar.setAttribute('aria-valuenow', progress);
@@ -1085,8 +1174,9 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
         //statusMessage.innerText = 'Progress: ' + progress + '%';
         if (progress === 100) {
           //progressBar.classList.remove('progress-bar-animated');
-		  document.getElementById('progress-container').style.display = 'none';
+		  //document.getElementById('progress-container').style.display = 'none';
 		  document.getElementById('start-button').style.display = 'none';
+		  
         }
       }
       document.getElementById('start-button').addEventListener('click', function() {
@@ -1105,8 +1195,12 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
           if (data.result === 'success') {
             // Job completed successfully
             updateProgress(100);
-			
-            console.log('Job completed:', data.data);
+			 //var metrics = data.metrics;
+
+                                // Display the metrics on the HTML page
+                               // updateMetricsDisplay(metrics);
+							   document.getElementById('finalH').style.display = 'block';
+            console.log('Job completed first:', data.data);
           } else if (data.result === 'training_in_progress') {
             // Update progress asynchronously
             setTimeout(function checkProgress() {
@@ -1118,13 +1212,14 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
                 } else {
                   // Job completed or encountered an error
                   if (progressData.result === 'success') {
-                    updateProgress(100);
+				   
+                    //updateProgress(100);
 					// Access the metrics from the JSON response using progressData.metrics
-                                var metrics = progressData.metrics;
+                               // var metrics = progressData.metrics;
 
                                 // Display the metrics on the HTML page
-                                updateMetricsDisplay(metrics);
-                    console.log('Job completed:', progressData.data);
+                                //updateMetricsDisplay(metrics);
+                    console.log('Job completed second:', progressData.data);
                   } 
 				  else {
                     console.log('Training not started or error occurred.');
@@ -1139,6 +1234,7 @@ rithms in terms of cost, performance, speed, interpretability, and reproducibili
         });
       });
     </script>
+
 	
 	
 	
@@ -1200,7 +1296,7 @@ numb.textContent = counter + "%";
 				
 				} else if (spinnerValue === "training") {
                     console.log("Classification is still in progress. Display a message or handle accordingly.");
-					setTimeout(q_spinner, 2000);
+					setTimeout(q_spinner, 2100);
                 } else {
                     console.log("Unknown response from the server."); // Handle unexpected response
                 }
@@ -1231,14 +1327,6 @@ numb.textContent = counter + "%";
 
 
 
-<script>
-  // Initialize the popover
-  $(function () {
-    $('[data-toggle="popover"]').popover({
-      html: true, // Enable HTML content
-    });
-  });
-</script>
 
 
 
@@ -1265,7 +1353,36 @@ numb.textContent = counter + "%";
     </script>
 
  
-      
+      <script>
+  function validateForm() {
+    // Get references to the form elements
+
+	var modelSelect = document.getElementsByName('model')[0];
+    var datasetSelect = document.getElementsByName('dataset')[0];
+    var splitSelect = document.getElementsByName('split')[0];
+    var pcaSelect = document.getElementsByName('pca')[0];
+    var featuremapSelect = document.getElementsByName('featuremap')[0];
+    var entangSelect = document.getElementsByName('entang')[0];
+	var optimizerSelect = document.getElementsByName('optimizer')[0];
+
+
+    // Check if all required fields are selected
+    if (
+      modelSelect.value === 'Models' ||
+      datasetSelect.value === 'Datasets' ||
+      splitSelect.value === 'Train_Test_split Values' ||
+      pcaSelect.value === 'PCA Values' ||
+      featuremapSelect.value === 'Feature Map' ||
+      entangSelect.value === 'Entanglements' 
+      //optimizerSelect.value === 'optimizer type'
+    ) {
+      // Show a custom validation message
+      alert('Please fill out all required fields.');
+      return false; // Prevent form submission
+    }
+    return true; // Form is valid, proceed with form submission
+  }
+</script>
 
 
 
